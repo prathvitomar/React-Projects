@@ -1,4 +1,3 @@
-import Chai from './Chai.jsx'
 import PasswordGenerator from './components/PasswordGenerator.jsx'
 function App() {
 
