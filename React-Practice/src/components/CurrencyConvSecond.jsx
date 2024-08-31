@@ -1,4 +1,7 @@
 import React from 'react'
+import InputBoxSecond from './InputBoxSecond';
+import { useState } from 'react'
+import useCurrencyInfo from '../hooks/useCurrencyInfo';
 
 function CurrencyConvSecond() {
 
@@ -36,7 +39,7 @@ function CurrencyConvSecond() {
                     }
                 >
                     <div className="w-full mb-1">
-                        <InputBox
+                        <InputBoxSecond
                         label="From"
                         amount={amount}
                         onAmountChange={(e)=> setAmount(e)}
@@ -55,7 +58,7 @@ function CurrencyConvSecond() {
                         </button>
                     </div>
                     <div className="w-full mt-1 mb-4">
-                        <InputBox
+                        <InputBoxSecond
                         label="To"
                         amount={convertedAmount}
                         onCurrencyChange={(e)=> setTo(e)}
