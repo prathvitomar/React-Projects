@@ -12,13 +12,11 @@ function App() {
 
   return (
     <>
-    <h1>React Projects</h1>
+    {/* <h1>React Projects</h1> */}
       {/* <PasswordGenerator/> */}
       {/* <CurrencyConverter/> */}
       {/* <CurrencyConvSecond /> */}
-      <Header />
-      <Home />
-      <Footer />
+
     </>
   )
 }

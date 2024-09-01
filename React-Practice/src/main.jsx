@@ -8,27 +8,11 @@ import Contact from './components/Contact.jsx'
 import About from './components/About.jsx'
 import Layout from './Layout.jsx'
 import Github, { githubApi } from './components/Github.jsx'
-
-// const router = createBrowserRouter([
-//   {
-//     path : "/",
-//     element : <Layout />,
-//     children : [
-//       {
-//         path: "",
-//         element : <Home />
-//       },
-//       {
-//         path: "about",
-//         element : <About />
-//       },
-//       {
-//         path: "contact",
-//         element : <Contact />
-//       },
-//     ]
-//   }
-// ])
+import Login from './components/Login.jsx'
+import Profile from './components/Profile.jsx'
+import UserContextProvider from './context/UserContextProvider.jsx'
+import Theme from './components/Theme.jsx';
+import { ThemeProvider } from './context/ThemeContext.js'
 
 
 const router = createBrowserRouter(
@@ -37,9 +21,13 @@ const router = createBrowserRouter(
       <Route path='' element={<Home/>}/>
       <Route path='about' element={<About/>}/>
       <Route path='contact' element={<Contact/>}/>
+      <Route path='login' element={<Login/>}/>
+      <Route path='profile' element={<Profile/>}/>
+      <Route path='login' element={<Login/>}/>
+      <Route path='theme' element={<Theme/>}/>
       <Route
       loader={githubApi}
-      path='github/:userId'
+      path='github'
       element={<Github/>}/>
     </Route>
   )
@@ -47,6 +35,8 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <UserContextProvider>
     <RouterProvider router={router} />
+    </UserContextProvider>
   </StrictMode>
 )

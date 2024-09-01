@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useLoaderData, useParams } from 'react-router-dom'
 
 function Github() {
-    const {userId} = useParams();
+    // const {userId} = useParams();
     const data = useLoaderData();
     console.log(data);
     
@@ -17,7 +17,7 @@ function Github() {
   return (
     <>
         <div>
-            <h1 className='mt-3 mb-3 italic'> UserId : {userId}</h1>
+            {/* <h1 className='mt-3 mb-3 italic'> UserId : {userId}</h1> */}
             <h1 className='mt-3 mb-3 italic'> Github Followers : {data.followers}</h1>
             <img className='mt-3 mb-3' width="300px" src={data.avatar_url} alt="Github PFP" />
         </div>
