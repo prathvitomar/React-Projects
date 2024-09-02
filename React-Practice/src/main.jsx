@@ -14,6 +14,7 @@ import UserContextProvider from './context/UserContextProvider.jsx'
 import Theme from './components/Theme.jsx';
 import { ThemeProvider } from './context/ThemeContext.js'
 import Todo from './components/Todo/Todo.jsx'
+import TodoTwo from './components/Todo/TodoTwo.jsx'
 
 
 const router = createBrowserRouter(
@@ -27,6 +28,7 @@ const router = createBrowserRouter(
       <Route path='login' element={<Login/>}/>
       <Route path='theme' element={<Theme/>}/>
       <Route path='todo' element={<Todo/>}/>
+      <Route path='todo-two' element={<TodoTwo/>}/>
       <Route
       loader={githubApi}
       path='github'
