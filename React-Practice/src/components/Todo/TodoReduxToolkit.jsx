@@ -5,7 +5,7 @@ import ListTodo from './listTodo'
 function TodoReduxToolkit() {
   return (
     <>
-        <h1>TodoReduxToolkit</h1>
+        <h1 className='mt-8 mb-8'>TodoReduxToolkit</h1>
             <AddTodo/>
             <ListTodo/>
     </>
