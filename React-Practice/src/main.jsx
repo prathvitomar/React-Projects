@@ -15,6 +15,9 @@ import Theme from './components/Theme.jsx';
 import { ThemeProvider } from './context/ThemeContext.js'
 import Todo from './components/Todo/Todo.jsx'
 import TodoTwo from './components/Todo/TodoTwo.jsx'
+import TodoReduxToolkit from './components/Todo/TodoReduxToolkit.jsx'
+import { Provider } from 'react-redux'
+import store from './app/store.js'
 
 
 const router = createBrowserRouter(
@@ -29,6 +32,7 @@ const router = createBrowserRouter(
       <Route path='theme' element={<Theme/>}/>
       <Route path='todo' element={<Todo/>}/>
       <Route path='todo-two' element={<TodoTwo/>}/>
+      <Route path='todo-redux' element={<TodoReduxToolkit/>}/>
       <Route
       loader={githubApi}
       path='github'
@@ -38,9 +42,9 @@ const router = createBrowserRouter(
 )
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <Provider store={store}>
     <UserContextProvider>
     <RouterProvider router={router} />
     </UserContextProvider>
-  </StrictMode>
+  </Provider>
 )
