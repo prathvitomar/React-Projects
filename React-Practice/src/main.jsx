@@ -18,6 +18,7 @@ import TodoTwo from './components/Todo/TodoTwo.jsx'
 import TodoReduxToolkit from './components/Todo/TodoReduxToolkit.jsx'
 import { Provider } from 'react-redux'
 import store from './app/store.js'
+import DarkMode from './Practice-Projects/DarkMode/DarkMode.jsx'
 
 
 const router = createBrowserRouter(
@@ -37,6 +38,7 @@ const router = createBrowserRouter(
       loader={githubApi}
       path='github'
       element={<Github/>}/>
+    <Route path='dark-mode' element={<DarkMode/>}/>
     </Route>
   )
 )
