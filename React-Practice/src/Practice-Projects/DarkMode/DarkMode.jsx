@@ -9,33 +9,37 @@ function DarkMode() {
     setDarkTheme((prev) => !prev);
   };
 
-  const handleSubmit = (e) => {
-    
-  }
+  const handleSubmit = (e) => {};
 
   return (
     <>
-      <div className="border border-dark mt-4 mb-4">
-        <div className="flex justify-between">
-          <h1 className={`${darkTheme ? 'text-fuchsia-500' : 'text-black'}`}>Dark Mode Challenge</h1>
+      <div
+        className={`${
+          darkTheme ? "bg-sky-950" : ""
+        } border border-dark mt-4 mb-4`}
+      >
+        <div className="flex justify-center">
+          <h1 className={`${darkTheme ? "text-fuchsia-500" : "text-black"} font-bold`}>
+            Dark Mode Challenge
+          </h1>
           <button onClick={changeTheme}>
             {darkTheme ? (
-              <img
-                width="30px"
-                src="../public/images/brightness-and-contrast.png"
-                alt="dark-Mode"
-              />
-            ) : (
               <img
                 width="30px"
                 src="../public/images/day-and-night.png"
                 alt="light-Mode"
               />
+            ) : (
+              <img
+                width="30px"
+                src="../public/images/brightness-and-contrast.png"
+                alt="dark-Mode"
+              />
             )}
           </button>
         </div>
-        <div>
-          <p>
+        <div className="selection:bg-fuchsia-300 selection:text-fuchsia-900">
+          <p className={` ${darkTheme ? 'text-white' : 'text-black'}`}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ex
             debitis obcaecati excepturi, explicabo ducimus sunt at facilis
             voluptates corporis quisquam natus vitae deleniti, ullam vel sit
@@ -61,24 +65,30 @@ function DarkMode() {
             mollitia id? Inventore, eligendi esse nihil iure expedita numquam.
           </p>
         </div>
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input 
-                type="name"
-                required={true}
-                value={name}
-                onChange={(e)=> setName(e.target.value)}
-                />
-                <input 
-                type="email"
-                required={true}
-                value={email}
-                onChange={(e)=> setEmail(e.target.value)}
-                />
-                <button
-                type="submit"
-                >Submit</button>
-            </form>
+        <div className="">
+          <form onSubmit={handleSubmit}>
+            <div className="flex justify-center">
+            <input
+              className={`${darkTheme ? '' : 'caret-slate-500'} block rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6`}
+              placeholder="Name"
+              type="name"
+              required={true}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <input
+              className="block rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              placeholder="Email"
+              type="email"
+              required={true}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            </div>
+            <button
+            className={`${darkTheme ? 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">' : 'bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">'}`} 
+            type="submit">Submit</button>
+          </form>
         </div>
       </div>
     </>
