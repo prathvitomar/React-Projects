@@ -19,6 +19,7 @@ import TodoReduxToolkit from './components/Todo/TodoReduxToolkit.jsx'
 import { Provider } from 'react-redux'
 import store from './app/store.js'
 import DarkMode from './Practice-Projects/DarkMode/DarkMode.jsx'
+import PasswordGenerator from './Practice-Projects/PasswordGenerator/PasswordGenerator.jsx'
 
 
 const router = createBrowserRouter(
@@ -39,6 +40,7 @@ const router = createBrowserRouter(
       path='github'
       element={<Github/>}/>
     <Route path='dark-mode' element={<DarkMode/>}/>
+    <Route path='password-generator' element={<PasswordGenerator/>}/>
     </Route>
   )
 )
