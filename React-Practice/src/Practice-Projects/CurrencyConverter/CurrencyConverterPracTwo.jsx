@@ -33,6 +33,7 @@ function CurrencyConverterPracTwo() {
           <div>
             <InputCardPrac
               label="From"
+              placeholder="Enter amount"
               type="number"
               value={amount}
               selectedOption={from}
@@ -54,6 +55,7 @@ function CurrencyConverterPracTwo() {
             <InputCardPrac
               label="To"
               type="number"
+              placeholder="Converted Amount"
               value={convertedAmount}
               selectedOption={to}
               onAmountChange={(amount) => setConvertedAmount(amount)}
