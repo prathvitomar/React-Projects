@@ -21,6 +21,7 @@ import store from './app/store.js'
 import DarkMode from './Practice-Projects/DarkMode/DarkMode.jsx'
 import PasswordGenerator from './Practice-Projects/PasswordGenerator/PasswordGenerator.jsx'
 import CurrencyConverterPractice from './Practice-Projects/CurrencyConverter/CurrencyConverterPractice.jsx'
+import CurrencyConverterPracTwo from './Practice-Projects/CurrencyConverter/CurrencyConverterPracTwo.jsx'
 
 
 const router = createBrowserRouter(
@@ -43,6 +44,7 @@ const router = createBrowserRouter(
       <Route path='dark-mode' element={<DarkMode/>}/>
       <Route path='password-generator' element={<PasswordGenerator/>}/>
       <Route path='currency-converter' element={<CurrencyConverterPractice/>}/>
+      <Route path='currency-converter-two' element={<CurrencyConverterPracTwo/>}/>
     </Route>
   )
 )
