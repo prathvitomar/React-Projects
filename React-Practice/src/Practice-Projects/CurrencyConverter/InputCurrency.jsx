@@ -7,8 +7,6 @@ function InputCurrency({
     type = 'text',
     amount,
     onAmountChange,
-    onCurrencyChange,
-    currencyOptions,
     placeholder,
     ...props
 }) {

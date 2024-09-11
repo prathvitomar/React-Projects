@@ -8,10 +8,10 @@ function CurrencyConverterPractice() {
   const [to, setTo] = useState("inr");
   const [convertedAmount, setConvertedAmount] = useState(0);
   const currencyData = useCurrencyHook(from);
-  const currencyOptions = currencyData[from]
-    ? Object.keys(currencyData[from])
-    : [];
-
+  const currencyOptions = currencyData
+  ? Object.keys(currencyData)
+  : [];
+  
   const swap = () => {
     let fromValue = from;
     setFrom(to);
@@ -19,25 +19,27 @@ function CurrencyConverterPractice() {
   };
 
   const convert = () => {
-    setConvertedAmount(amount * currencyData.to[to]);
+    setConvertedAmount(amount * currencyData[to]);
+    console.log(convertedAmount)
   };
 
   return (
     <>
-      <h1>These Data is from {currencyData.date} Indian Standard Timezone</h1>
+      {/* <h1>These Data is from {currencyData.date} Indian Standard Timezone</h1> */}
       <form onSubmit={(e)=>{
-        e.preventDefault()
+        e.preventDefault();
         convert()
       }}>
         <div className="flex justify-between">
           <InputCurrency
+            label="From"
             type="number"
             placeholder="Enter Amount"
             value={amount}
-            onAmountChange={(e) => setAmount(e.target.value)}
+            onAmountChange={(amount) => setAmount(amount)}
           />
           <div>
-            <select name="currency" onChange={(e) => setFrom(e.target.value)}>
+            <select value={from} onChange={(e) => setFrom(e.target.value)}>
               {currencyOptions.map((currency) => (
                 <option key={currency} value={currency}>
                   {currency}
@@ -55,13 +57,13 @@ function CurrencyConverterPractice() {
         </button>
         <div className="flex justify-between">
           <InputCurrency
+            label="To"
             type="number"
             isDisable={true}
             value={convertedAmount}
-            // onChange={}
           />
           <div>
-            <select name="currency" onChange={(e) => setTo(e.target.value)}>
+            <select value={to} onChange={(e) => setTo(e.target.value)}>
               {currencyOptions.map((currency) => (
                 <option key={currency} value={currency}>
                   {currency}
