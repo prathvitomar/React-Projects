@@ -16,7 +16,7 @@ function App() {
     .finally(()=> setLoading(false));
   },[])
 
-  return loading ? (
+  return !loading ? (
     <>
     <Header/>
     <main>
