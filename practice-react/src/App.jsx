@@ -1,10 +1,10 @@
-import PasswordGenerator from './components/PasswordGenerator.jsx'
+import Debouncing from './react-coding-practice/Debouncing.jsx'
+import Forms from './react-coding-practice/Forms.jsx'
 function App() {
 
   return (
     <>
-      <h1>this is react app</h1>
-      <PasswordGenerator />
+      <Debouncing/>
     </>
   )
 }
