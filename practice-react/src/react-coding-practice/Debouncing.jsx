@@ -1,24 +1,26 @@
 import React, { useEffect, useState } from 'react'
 
 function Debouncing() {
-    const [pin, setPin] = useState("");
+    const [data, setData] = useState("");
+
     useEffect(()=>{
         let debouncing = setTimeout(()=>{
-            fetch(`https://api.postalpincode.in/pincode/${pin}`)
+            fetch(`https://api.postalpincode.in/pincode/${data}`)
             .then((res)=> res.json())
-            .then((data)=> console.log(data[0].Postoffice))
+            .then((res)=> console.log(res))
             .catch((err)=> console.log(err))
-        },3000)
+        },2000)
 
-        return ()=>{
-            clearTimeout(debouncing);
+        return ()=> {
+            clearTimeout(debouncing)
         }
-    },[pin])
+        
+
+        },[data])
 
     return (
         <>
-            <input type="text" value={pin} onChange={(e)=> setPin(e.target.value)} />
-            {/* <button type='button' onClick={debouncing}></button> */}
+        <input type="text" value={data} onChange={(e)=> setData(e.target.value)}/>
         </>
     )
 }
