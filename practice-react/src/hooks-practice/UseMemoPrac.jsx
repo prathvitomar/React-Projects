@@ -1,25 +1,27 @@
-import React, {useState, useMemo} from 'react'
+import React, { useState, useMemo, useEffect } from "react";
+import data from "./data";
 
 function UseMemoPrac() {
     const [count, setCount] = useState(0);
-    const mutlipyedVal = useMemo(()=>{
-        multiplyCount()
-    },[])
+    const [items] = useState(data);
+    const itemSelected = useMemo(()=>{
+        items.find(item => {
+            console.log(item)
+            item === 11000
+        });
+    },[items])
 
-    function multiplyCount(){
-        for(let i=0; i<10000; i++){
-            setCount(prev => prev + i);
-            console.log(count)
-        }
-    }
+    // console.log(itemSelected)
 
-
-    return (
-        <>
-            <h1>Count : {count}</h1>
-            <button type='button' onClick={multiplyCount}>Increase</button>
-        </>
-    )
+  return (
+    <>
+      <h1>Count : {count}</h1>
+      <h1>Items Selected : {itemSelected}</h1>
+      <button type="button" onClick={() => setCount((prev) => prev + 1)}>
+        Increase
+      </button>
+    </>
+  );
 }
 
-export default UseMemoPrac
+export default UseMemoPrac;
