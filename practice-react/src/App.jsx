@@ -1,4 +1,5 @@
 import UseCallbackPrac from './hooks-practice/UseCallbackPrac.jsx'
+import UseLayoutEffectPrac from './hooks-practice/UseLayoutEffectPrac.jsx'
 import UseMemoPrac from './hooks-practice/UseMemoPrac.jsx'
 import UseRefPrac from './hooks-practice/useRefPrac.jsx'
 import Debouncing from './react-coding-practice/Debouncing.jsx'
@@ -9,7 +10,8 @@ function App() {
     <>
       {/* <UseRefPrac/> */}
       {/* <UseMemoPrac /> */}
-      <UseCallbackPrac />
+      {/* <UseCallbackPrac /> */}
+      <UseLayoutEffectPrac />
     </>
   )
 }
