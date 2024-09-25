@@ -3,7 +3,7 @@ import React, { useEffect, useState, useLayoutEffect } from 'react'
 function UseLayoutEffectPrac() {
     const ids = [1,2]
     const [id, setId] = useState(ids[0]);
-    const [admin, setAdmin] = useState(true);  
+    const [admin, setAdmin] = useState(true);
 
     let now = performance.now();
     while(performance.now() - now < 200){

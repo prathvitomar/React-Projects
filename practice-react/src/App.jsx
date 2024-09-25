@@ -4,6 +4,7 @@ import UseMemoPrac from './hooks-practice/UseMemoPrac.jsx'
 import UseRefPrac from './hooks-practice/useRefPrac.jsx'
 import Debouncing from './react-coding-practice/Debouncing.jsx'
 import Forms from './react-coding-practice/Forms.jsx'
+import TicTacToe from './react-coding-practice/TicTacToe.jsx'
 function App() {
 
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <UseRefPrac/> */}
       {/* <UseMemoPrac /> */}
       {/* <UseCallbackPrac /> */}
-      <UseLayoutEffectPrac />
+      {/* <UseLayoutEffectPrac /> */}
+      <TicTacToe/>
     </>
   )
 }
