@@ -9,6 +9,8 @@ import ThemeMain from './components/ThemeMain.jsx'
 import UseReducerMain from './hooks-practice/useReducerMain.jsx'
 import UseCallbackMain from './hooks-practice/UseCallbackMain.jsx'
 import UseMemoMain from './hooks-practice/UseMemoMain.jsx'
+import FormikAndYup from './components/FormikAndYup.jsx'
+import CountandName from './useEffect-Challenges/CountandName.jsx'
 function App() {
 
   return (
@@ -21,7 +23,9 @@ function App() {
       {/* <ThemeMain/> */}
       {/* <UseReducerMain/> */}
       {/* <UseCallbackMain/> */}
-      <UseMemoMain/>
+      {/* <UseMemoMain/> */}
+      {/* <FormikAndYup/> */}
+      <CountandName/>
     </>
   )
 }
