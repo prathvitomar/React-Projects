@@ -15,6 +15,11 @@ import CountdownTimer from './react-coding-practice/CountdownTimer.jsx'
 import FAQ from './react-coding-practice/FAQ.jsx'
 import MortgageConverter from './react-coding-practice/MortgageConverter.jsx'
 import UndoableCounter from './react-coding-practice/UndoableCounter.jsx'
+import ShoppingItem from './react-coding-practice/ShoppingItem.jsx'
+import ShoppingCart from './react-coding-practice/ShoppingCart.jsx'
+import ModalOverlay from './react-coding-practice/ModalOverlay.jsx'
+import CodeVerification from './react-coding-practice/CodeVerification.jsx'
+import AnnoyingSignupForm from './react-coding-practice/AnnoyingSignupForm.jsx'
 function App() {
   // const data = [
   //   {
@@ -57,7 +62,12 @@ function App() {
         ))
       } */}
       {/* <MortgageConverter/> */}
-      <UndoableCounter/>
+      {/* <UndoableCounter/> */}
+      {/* <ShoppingItem/> */}
+      {/* <ShoppingCart/> */}
+      {/* <ModalOverlay/> */}
+      {/* <CodeVerification/> */}
+      <AnnoyingSignupForm/>
     </>
   )
 }
