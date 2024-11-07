@@ -11,6 +11,7 @@ import UseCallbackMain from './hooks-practice/UseCallbackMain.jsx'
 import UseMemoMain from './hooks-practice/UseMemoMain.jsx'
 import FormikAndYup from './components/FormikAndYup.jsx'
 import CountandName from './useEffect-Challenges/CountandName.jsx'
+import CountdownTimer from './react-coding-practice/CountdownTimer.jsx'
 function App() {
 
   return (
@@ -25,7 +26,8 @@ function App() {
       {/* <UseCallbackMain/> */}
       {/* <UseMemoMain/> */}
       {/* <FormikAndYup/> */}
-      <CountandName/>
+      {/* <CountandName/> */}
+      <CountdownTimer/>
     </>
   )
 }

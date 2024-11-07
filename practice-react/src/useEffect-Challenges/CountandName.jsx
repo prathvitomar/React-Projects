@@ -9,6 +9,7 @@ function CountandName() {
     document.title = `Count : ${count}`
     console.log(name)
   }, [count]);
+  
 
   return (
     <>
