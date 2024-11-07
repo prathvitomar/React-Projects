@@ -12,7 +12,27 @@ import UseMemoMain from './hooks-practice/UseMemoMain.jsx'
 import FormikAndYup from './components/FormikAndYup.jsx'
 import CountandName from './useEffect-Challenges/CountandName.jsx'
 import CountdownTimer from './react-coding-practice/CountdownTimer.jsx'
+import FAQ from './react-coding-practice/FAQ.jsx'
+import MortgageConverter from './react-coding-practice/MortgageConverter.jsx'
+import UndoableCounter from './react-coding-practice/UndoableCounter.jsx'
 function App() {
+  // const data = [
+  //   {
+  //     id : 1,
+  //     title : "Title 1",
+  //     description : "Description 1"
+  //   },
+  //   {
+  //     id : 2,
+  //     title : "Title 2",
+  //     description : "Description 2"
+  //   },
+  //   {
+  //     id : 3,
+  //     title : "Title 3",
+  //     description : "Description 3"
+  //   },
+  // ]
 
   return (
     <>
@@ -27,7 +47,17 @@ function App() {
       {/* <UseMemoMain/> */}
       {/* <FormikAndYup/> */}
       {/* <CountandName/> */}
-      <CountdownTimer/>
+      {/* <CountdownTimer/> */}
+
+      {/* {
+        data.map((item)=> (
+          <div key={item.id}>
+            <FAQ title={item.title} id={item.id} description={item.description}/>
+          </div>
+        ))
+      } */}
+      {/* <MortgageConverter/> */}
+      <UndoableCounter/>
     </>
   )
 }
