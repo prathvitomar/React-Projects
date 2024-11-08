@@ -20,6 +20,23 @@ import ShoppingCart from './react-coding-practice/ShoppingCart.jsx'
 import ModalOverlay from './react-coding-practice/ModalOverlay.jsx'
 import CodeVerification from './react-coding-practice/CodeVerification.jsx'
 import AnnoyingSignupForm from './react-coding-practice/AnnoyingSignupForm.jsx'
+import Searching from './react-coding-practice/Searching.jsx'
+import SearchingPractice from './react-coding-practice/SearchingPractice.jsx'
+import UnDoablePractice from './react-coding-practice/UnDoablePractice.jsx'
+import JobBoard from './react-coding-practice/JobBoard.jsx'
+import Pagination from './react-coding-practice/Pagination.jsx'
+import { useEffect, useState } from 'react'
+import MultipleAccordian from './react-coding-practice/MultipleAccordian.jsx'
+import RandomColorPractice from './react-coding-practice/RandomColorPractice.jsx'
+import ImageSlider from './react-coding-practice/ImageSlider.jsx'
+import LoadMore from './react-coding-practice/LoadMore.jsx'
+import TreeView from './react-coding-practice/TreeView.jsx'
+import QRgenerator from './react-coding-practice/QRgenerator.jsx'
+import DarkMode from './react-coding-practice/darkMode.jsx'
+import Tab from './react-coding-practice/Tab.jsx'
+import ShowModal from './react-coding-practice/ShowModal.jsx'
+import AutoSearch from './react-coding-practice/AutoSearch.jsx'
+
 function App() {
   // const data = [
   //   {
@@ -34,10 +51,93 @@ function App() {
   //   },
   //   {
   //     id : 3,
-  //     title : "Title 3",
+  //     title : "Title 3",2
+
   //     description : "Description 3"
   //   },
   // ]
+
+  // const [pageNumber, setPageNumber] = useState(1)
+
+  // useEffect(() =>{
+  //   fetchData()
+  // },[pageNumber])
+  
+  // async function fetchData(){
+  //   try {
+  //     const data = await fetch(`https://omdbapi.com/?apikey=22131b93&s=avengers&page=${pageNumber}`)
+  //     const res = await data.json()
+  //     console.log(res)
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
+  // const handlePage = (digit)=>{
+  //   if(pageNumber < 1){
+  //     return
+  //   }
+  //   setPageNumber(prev => prev + digit)
+  // }
+
+  // const data = [
+  //   {
+  //     label: "Home",
+  //     to: "/",
+  //   },
+  //   {
+  //     label: "Profile",
+  //     to: "/profile",
+  //     children: [
+  //       {
+  //         label: "Details",
+  //         to: "details",
+  //         children: [
+  //           {
+  //             label: "Location",
+  //             to: "location",
+  //             children: [
+  //               {
+  //                 label: "City",
+  //                 to: "city",
+  //               },
+  //             ],
+  //           },
+  //         ],
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     label: "Settings",
+  //     to: "/settings",
+  //     children: [
+  //       {
+  //         label: "Account",
+  //         to: "account",
+  //       },
+  //       {
+  //         label: "Security",
+  //         to: "security",
+  //         children: [
+  //           {
+  //             label: "Login",
+  //             to: "login",
+  //           },
+  //           {
+  //             label: "Register",
+  //             to: "register",
+  //             children : [
+  //                 {
+  //                     label : 'Random data',
+  //                     to : ''
+  //                 }
+  //             ]
+  //           },
+  //         ],
+  //       },
+  //     ],
+  //   },
+  // ];
+
 
   return (
     <>
@@ -53,7 +153,6 @@ function App() {
       {/* <FormikAndYup/> */}
       {/* <CountandName/> */}
       {/* <CountdownTimer/> */}
-
       {/* {
         data.map((item)=> (
           <div key={item.id}>
@@ -67,7 +166,22 @@ function App() {
       {/* <ShoppingCart/> */}
       {/* <ModalOverlay/> */}
       {/* <CodeVerification/> */}
-      <AnnoyingSignupForm/>
+      {/* <AnnoyingSignupForm/> */}
+      {/* <Searching/> */}
+      {/* <SearchingPractice/> */}
+      {/* <UnDoablePractice/> */}
+      {/* <JobBoard/> */}
+      {/* <Pagination pageNumber={pageNumber} handlePage={(digit)=> handlePage(digit)}/> */}
+      {/* <MultipleAccordian/> */}
+      {/* <RandomColorPractice/> */}
+      {/* <ImageSlider/> */}
+      {/* <LoadMore/> */}
+      {/* <TreeView data={data}/> */}
+      {/* <QRgenerator/> */}
+      {/* <DarkMode/> */}
+      {/* <Tab/> */}
+      {/* <ShowModal/> */}
+      <AutoSearch/>
     </>
   )
 }
