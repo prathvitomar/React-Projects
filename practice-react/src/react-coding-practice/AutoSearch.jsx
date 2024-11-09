@@ -21,8 +21,10 @@ function AutoSearch() {
     const [searchData, setSearchData] = useState([]);
 
     const filterData = () =>{
-        let filtering = data.filter(item => item.toLowerCase().includes(search.toLowerCase()))
-        setSearchData(filtering);
+        if(search !== ""){
+            let filtering = data.filter(item => item.toLowerCase().includes(search.toLowerCase()))
+            setSearchData(filtering);
+        }
     }
 
     useEffect(() =>{

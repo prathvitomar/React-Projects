@@ -14,8 +14,6 @@ function Debouncing() {
         return ()=> {
             clearTimeout(debouncing)
         }
-        
-
         },[data])
 
     return (
