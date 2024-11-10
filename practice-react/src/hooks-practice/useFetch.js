@@ -10,8 +10,8 @@ function useFetch({ url }) {
             if (!res.ok) {
                 throw new Error(`Error: ${res.status} ${res.statusText}`);
             }
-            const resData = await res.json(); // Await the JSON parsing
-            setData(resData.products); // Access 'products' assuming the structure is correct
+            const resData = await res.json(); 
+            setData(resData.products); 
         } catch (error) {
             setError(error.message);
             console.error("Fetch error:", error);
@@ -20,7 +20,7 @@ function useFetch({ url }) {
 
     useEffect(() => {
         fetchData();
-    }, [url]); // Add 'url' as a dependency
+    }, [url]); 
 
     return { data, error };
 }

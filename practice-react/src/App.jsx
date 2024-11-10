@@ -37,7 +37,8 @@ import Tab from './react-coding-practice/Tab.jsx'
 import ShowModal from './react-coding-practice/ShowModal.jsx'
 import AutoSearch from './react-coding-practice/AutoSearch.jsx'
 import useFeatureFlag, { FeatureFlagProvider } from './hooks-practice/featureFlag.js'
-import UseFetchComponent from './react-coding-practice/useFetchComponent.jsx'
+import MultipleFunctionality from './react-coding-practice/MultipleFunctionality.jsx'
+import WeatherApp from './react-coding-practice/WeatherApp.jsx'
 
 function App() {
   // const data = [
@@ -139,47 +140,36 @@ function App() {
   //     ],
   //   },
   // ];
-
-
-  
-// imageSlider : true,
-// pagination : true,
-// qrGenerator : false,
-// undoableCounter : true,
-// codeVerification : true,
-// mortgageConveter : false,
-
-
-  const {imageSlider,pagination,qrGenerator,undoableCounter,codeVerification,mortgageConveter} = useFeatureFlag();
+  // const {imageSlider,pagination,qrGenerator,undoableCounter,codeVerification,mortgageConveter} = useFeatureFlag();
   // const {data} = useFeatureFlag();
   // console.log(data);
 
-  const enabledFeatures = [
-    {
-      key : imageSlider,
-      component : <ImageSlider/>
-    },
-    {
-      key : pagination,
-      component : <Pagination/>
-    },
-    {
-      key : qrGenerator,
-      component : <QRgenerator/>
-    },
-    {
-      key : undoableCounter,
-      component : <UnDoablePractice/>
-    },
-    {
-      key : codeVerification,
-      component : <CodeVerification/>
-    },
-    {
-      key : mortgageConveter,
-      component : <MortgageConverter/>
-    },
-  ]
+  // const enabledFeatures = [
+  //   {
+  //     key : imageSlider,
+  //     component : <ImageSlider/>
+  //   },
+  //   {
+  //     key : pagination,
+  //     component : <Pagination/>
+  //   },
+  //   {
+  //     key : qrGenerator,
+  //     component : <QRgenerator/>
+  //   },
+  //   {
+  //     key : undoableCounter,
+  //     component : <UnDoablePractice/>
+  //   },
+  //   {
+  //     key : codeVerification,
+  //     component : <CodeVerification/>
+  //   },
+  //   {
+  //     key : mortgageConveter,
+  //     component : <MortgageConverter/>
+  //   },
+  // ]
 
 
 
@@ -229,7 +219,8 @@ function App() {
       {/* {
         enabledFeatures.map((component) => component.key ? component.component : null)
       } */}
-      <UseFetchComponent/>
+      {/* <MultipleFunctionality/> */}
+      <WeatherApp/>
     </>
   )
 }
