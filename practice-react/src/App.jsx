@@ -39,6 +39,9 @@ import AutoSearch from './react-coding-practice/AutoSearch.jsx'
 import useFeatureFlag, { FeatureFlagProvider } from './hooks-practice/featureFlag.js'
 import MultipleFunctionality from './react-coding-practice/MultipleFunctionality.jsx'
 import WeatherApp from './react-coding-practice/WeatherApp.jsx'
+import AccordianMultipleSelection from './react-coding-practice/AccordianMultipleSelection.jsx'
+import Interview from './react-coding-practice/Interview.jsx'
+import Css1 from './css-tutorial/css-1/css1.jsx'
 
 function App() {
   // const data = [
@@ -220,7 +223,9 @@ function App() {
         enabledFeatures.map((component) => component.key ? component.component : null)
       } */}
       {/* <MultipleFunctionality/> */}
-      <WeatherApp/>
+      {/* <WeatherApp/> */}
+      {/* <AccordianMultipleSelection/> */}
+      <Css1/>
     </>
   )
 }
