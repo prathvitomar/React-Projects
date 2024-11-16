@@ -42,6 +42,8 @@ import WeatherApp from './react-coding-practice/WeatherApp.jsx'
 import AccordianMultipleSelection from './react-coding-practice/AccordianMultipleSelection.jsx'
 import Interview from './react-coding-practice/Interview.jsx'
 import Css1 from './css-tutorial/css-1/css1.jsx'
+import Flexbox from './css-tutorial/flexbox/flexbox.jsx'
+import Grid from './css-tutorial/grid/Grid.jsx'
 
 function App() {
   // const data = [
@@ -225,7 +227,9 @@ function App() {
       {/* <MultipleFunctionality/> */}
       {/* <WeatherApp/> */}
       {/* <AccordianMultipleSelection/> */}
-      <Css1/>
+      {/* <Css1/> */}
+      {/* <Flexbox/> */}
+      <Grid/>
     </>
   )
 }

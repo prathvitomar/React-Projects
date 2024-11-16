@@ -1,0 +1,18 @@
+.main-container{
+    height: 80vh;
+    border:3px solid black;
+    display: flex;
+    /* align-items: center; */
+    align-content: center;
+    /* justify-content: center; */
+    gap: 10px 20px;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    overflow: hidden;
+}
+
+.boxes{
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+}
