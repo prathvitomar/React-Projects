@@ -45,6 +45,11 @@ import Css1 from './css-tutorial/css-1/css1.jsx'
 import Flexbox from './css-tutorial/flexbox/flexbox.jsx'
 import Grid from './css-tutorial/grid/Grid.jsx'
 import DebouncingApi from './advance-topics/DebouncingApi.jsx'
+import Todos from './react-coding-practice/Todos.jsx'
+import ImageSlider2 from './react-coding-practice/ImageSlider2.jsx'
+import Pagination2 from './react-coding-practice/Pagination2.jsx'
+import Refs from './react-coding-practice/Refs.jsx'
+import Main from './interview-questions/EmployeeDatabaseManagement/Main.jsx'
 
 function App() {
   // const data = [
@@ -231,7 +236,15 @@ function App() {
       {/* <Css1/> */}
       {/* <Flexbox/> */}
       {/* <Grid/> */}
-      <DebouncingApi/>
+      {/* <DebouncingApi/> */}
+      {/* <Debouncing/> */}
+      {/* <Todos/> */}
+      {/* <Todos/> */}
+      {/* <Searching/> */}
+      {/* <ImageSlider2/> */}
+      {/* <Pagination2/> */}
+      {/* <Refs/> */}
+      <Main/>
     </>
   )
 }

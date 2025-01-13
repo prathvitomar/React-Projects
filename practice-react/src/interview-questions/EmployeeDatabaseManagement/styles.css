@@ -1,0 +1,58 @@
+.div-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.employeeList{
+    height: 100vh;
+    width: 50vw;
+}
+
+.employeeInfo{
+    height: 100vh;
+    width: 50vw;
+}
+
+.employee-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.employee-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.employee-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-space-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+.lists{
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 5px 20px;
+}
+
+.span{
+    cursor: pointer;
+    margin: 5px 20px;
+}
+
+.span-icon{
+    color: red;
+}
+
+.div-vertical{
+    display: flex;
+    flex-direction: column;
+}
