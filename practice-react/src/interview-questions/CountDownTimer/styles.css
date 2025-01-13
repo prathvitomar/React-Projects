@@ -1,0 +1,21 @@
+.countdown-timer {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .timer-inputs {
+    margin: 20px 0;
+  }
+  
+  .timer-inputs input {
+    width: 50px;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .timer-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
