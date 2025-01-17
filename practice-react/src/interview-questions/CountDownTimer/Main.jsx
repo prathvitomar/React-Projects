@@ -33,16 +33,16 @@ const Main = () => {
   };
 
   // Update Timer Logic
-const updateTimer = () => {
+  const updateTimer = () => {
     let h = parseInt(hour || 0);
     let m = parseInt(minute || 0);
     let s = parseInt(second || 0);
-  
+
     if (h === 0 && m === 0 && s === 0) {
       resetTimer(); // If time reaches zero, reset and stop the timer.
       return;
     }
-  
+
     if (s > 0) {
       s -= 1; // Decrement seconds.
     } else if (m > 0) {
@@ -53,13 +53,12 @@ const updateTimer = () => {
       m = 59; // Reset minutes to 59.
       s = 59; // Reset seconds to 59.
     }
-  
+
     // Update state with formatted values.
     setHour(h > 0 ? String(h).padStart(2, "0") : "");
     setMinute(m > 0 ? String(m).padStart(2, "0") : "");
     setSecond(s > 0 ? String(s).padStart(2, "0") : "");
   };
-  
 
   return (
     <div className="countdown-timer">

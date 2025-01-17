@@ -51,6 +51,7 @@ import Pagination2 from './react-coding-practice/Pagination2.jsx'
 import Refs from './react-coding-practice/Refs.jsx'
 import Main from './interview-questions/EmployeeDatabaseManagement/Main.jsx'
 import MainTimer from './interview-questions/CountDownTimer/Main.jsx'
+import MainPagination from './interview-questions/Pagination/Main.jsx'
 
 function App() {
   // const data = [
@@ -246,7 +247,8 @@ function App() {
       {/* <Pagination2/> */}
       {/* <Refs/> */}
       {/* <Main/> */}
-      <MainTimer/>
+      {/* <MainTimer/> */}
+      <MainPagination/>
     </>
   )
 }
