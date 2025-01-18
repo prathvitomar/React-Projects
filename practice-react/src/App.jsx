@@ -49,9 +49,10 @@ import Todos from './react-coding-practice/Todos.jsx'
 import ImageSlider2 from './react-coding-practice/ImageSlider2.jsx'
 import Pagination2 from './react-coding-practice/Pagination2.jsx'
 import Refs from './react-coding-practice/Refs.jsx'
-import Main from './interview-questions/EmployeeDatabaseManagement/Main.jsx'
+import MainEmployee from './interview-questions/EmployeeDatabaseManagement/Main.jsx'
 import MainTimer from './interview-questions/CountDownTimer/Main.jsx'
 import MainPagination from './interview-questions/Pagination/Main.jsx'
+import MainEMI from './interview-questions/EMIcalculator/Main.jsx'
 
 function App() {
   // const data = [
@@ -246,9 +247,10 @@ function App() {
       {/* <ImageSlider2/> */}
       {/* <Pagination2/> */}
       {/* <Refs/> */}
-      {/* <Main/> */}
+      {/* <MainEmployee/> */}
       {/* <MainTimer/> */}
-      <MainPagination/>
+      {/* <MainPagination/> */}
+      <MainEMI/>
     </>
   )
 }
