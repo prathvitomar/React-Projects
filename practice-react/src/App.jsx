@@ -54,6 +54,7 @@ import MainTimer from './interview-questions/CountDownTimer/Main.jsx'
 import MainPagination from './interview-questions/Pagination/Main.jsx'
 import MainEMI from './interview-questions/EMIcalculator/Main.jsx'
 import PasswordGenerator from './interview-questions/PasswordGenerator/PasswordGenerator.jsx'
+import MainLikedButton from './interview-questions/LikedButton/MainLikedButton.jsx'
 
 function App() {
   // const data = [
@@ -252,7 +253,8 @@ function App() {
       {/* <MainTimer/> */}
       {/* <MainPagination/> */}
       {/* <MainEMI/> */}
-      <PasswordGenerator/>
+      {/* <PasswordGenerator/> */}
+      <MainLikedButton/>
     </>
   )
 }
