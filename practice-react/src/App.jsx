@@ -55,6 +55,8 @@ import MainPagination from './interview-questions/Pagination/Main.jsx'
 import MainEMI from './interview-questions/EMIcalculator/Main.jsx'
 import PasswordGenerator from './interview-questions/PasswordGenerator/PasswordGenerator.jsx'
 import MainLikedButton from './interview-questions/LikedButton/MainLikedButton.jsx'
+import UseForm from './hooks-practice/UseForm.jsx'
+import UseFetch2 from './hooks-practice/UseFetch2.jsx'
 
 function App() {
   // const data = [
@@ -254,7 +256,9 @@ function App() {
       {/* <MainPagination/> */}
       {/* <MainEMI/> */}
       {/* <PasswordGenerator/> */}
-      <MainLikedButton/>
+      {/* <MainLikedButton/> */}
+      {/* <UseForm/> */}
+      <UseFetch2/>
     </>
   )
 }
