@@ -113,15 +113,87 @@
 // var x = 100;
 // a();
 
-var a = 10;
-let x = 20;
-{
-    var a = 100;
-    let x = 2;
-    let y = 3;
-    console.log(x);
-    console.log(y);
-    console.log(a);
+// var a = 10;
+// let x = 20;
+// {
+//     var a = 100;
+//     let x = 2;
+//     let y = 3;
+//     console.log(x);
+//     console.log(y);
+//     console.log(a);
+// }
+// console.log(a);
+// console.log(x);
+
+// function x(a){
+//     return function(b){
+//         console.log(a+b);
+//     }
+// }
+// x(4)(6);
+
+// function evaluate(operation){
+//         return function(a){
+//             return function(b){
+//                 if(operation==='add'){
+//                     return a+b;
+//                 }
+//                 if(operation==='sub'){
+//                     return a-b;
+//                 }
+//                 if(operation==='mul'){
+//                     return a*b;
+//                 }
+//                 if(operation==='div'){
+//                     return a/b;
+//                 }
+//             }
+//         }
+// }
+// console.log(evaluate('div')(3)(4))
+
+// function infiniteCurry(a){
+//     return function(b){
+//         if(b) return infiniteCurry(a+b);
+//         return a;
+//     }
+// }
+// console.log(infiniteCurry(3)(4)(2)())
+
+// let obj = function(a){
+//     delete a;
+//     return a;
+// }
+// console.log(obj(3));
+
+// const name = 'Prathvi';
+// const age = 25;
+
+// let obj = {
+//     name : 'Gappu',
+//     age : 26,
+//     home : 'Berasia',
+//     add : () =>{
+//         console.log(`${name} and ${age}`);
+//     }
+// }
+
+// obj.add();
+// console.log(Object.keys(obj));
+// for(let key in obj){
+//     console.log(obj[key]);
+// }
+
+let nums = {
+    a : 10,
+    b : 20,
+    c : 'House'
 }
-console.log(a);
-console.log(x);
+let ans;
+for(let values in nums){
+    if(typeof values === 'number'){
+        ans.push(values*2);
+    }
+}
+console.log(ans);

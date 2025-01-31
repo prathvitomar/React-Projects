@@ -57,6 +57,9 @@ import PasswordGenerator from './interview-questions/PasswordGenerator/PasswordG
 import MainLikedButton from './interview-questions/LikedButton/MainLikedButton.jsx'
 import UseForm from './hooks-practice/UseForm.jsx'
 import UseFetch2 from './hooks-practice/UseFetch2.jsx'
+import CustomHookPrac from './react-coding-practice/CustomHookPrac.jsx'
+import MainBreadcrumb from './interview-questions/BreadCrumb/MainBreadcrumb.jsx'
+import ItemPage from './interview-questions/BreadCrumb/ui/ItemPage.jsx'
 
 function App() {
   // const data = [
@@ -258,7 +261,10 @@ function App() {
       {/* <PasswordGenerator/> */}
       {/* <MainLikedButton/> */}
       {/* <UseForm/> */}
-      <UseFetch2/>
+      {/* <UseFetch2/> */}
+      {/* <CustomHookPrac/> */}
+      <MainBreadcrumb/>
+      {/* <ItemPage/> */}
     </>
   )
 }
