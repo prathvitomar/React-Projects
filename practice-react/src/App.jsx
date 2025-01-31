@@ -60,6 +60,7 @@ import UseFetch2 from './hooks-practice/UseFetch2.jsx'
 import CustomHookPrac from './react-coding-practice/CustomHookPrac.jsx'
 import MainBreadcrumb from './interview-questions/BreadCrumb/MainBreadcrumb.jsx'
 import ItemPage from './interview-questions/BreadCrumb/ui/ItemPage.jsx'
+import { Outlet } from 'react-router'
 
 function App() {
   // const data = [
@@ -263,8 +264,9 @@ function App() {
       {/* <UseForm/> */}
       {/* <UseFetch2/> */}
       {/* <CustomHookPrac/> */}
-      <MainBreadcrumb/>
+      {/* <MainBreadcrumb/> */}
       {/* <ItemPage/> */}
+      <Outlet/>
     </>
   )
 }

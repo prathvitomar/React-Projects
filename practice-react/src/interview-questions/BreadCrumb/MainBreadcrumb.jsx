@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import List from './ui/List';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 
 function MainBreadcrumb() {
     const [data, setData] = useState([]);
@@ -22,7 +22,7 @@ function MainBreadcrumb() {
     
     function handleId(id){
         setSelectedId(id);
-        navigate(`/breadcrumb/${selectedId}`)
+        navigate(`/breadcrumb/${id}`)
     }
 
   return (
@@ -33,6 +33,7 @@ function MainBreadcrumb() {
                     <List handleId={(id)=> handleId(id)} key={item.id} data={item}/>
             ))
         }
+        
     </>
   )
 }
