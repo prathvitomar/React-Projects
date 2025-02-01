@@ -61,6 +61,7 @@ import CustomHookPrac from './react-coding-practice/CustomHookPrac.jsx'
 import MainBreadcrumb from './interview-questions/BreadCrumb/MainBreadcrumb.jsx'
 import ItemPage from './interview-questions/BreadCrumb/ui/ItemPage.jsx'
 import { Outlet } from 'react-router'
+import MainJobBoard from './interview-questions/JobBoard/MainJobBoard.jsx'
 
 function App() {
   // const data = [
@@ -266,7 +267,9 @@ function App() {
       {/* <CustomHookPrac/> */}
       {/* <MainBreadcrumb/> */}
       {/* <ItemPage/> */}
-      <Outlet/>
+      {/* <Outlet/> */}
+      {/* <AutoSearch/> */}
+      <MainJobBoard/>
     </>
   )
 }
