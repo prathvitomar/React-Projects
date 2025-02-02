@@ -62,6 +62,9 @@ import MainBreadcrumb from './interview-questions/BreadCrumb/MainBreadcrumb.jsx'
 import ItemPage from './interview-questions/BreadCrumb/ui/ItemPage.jsx'
 import { Outlet } from 'react-router'
 import MainJobBoard from './interview-questions/JobBoard/MainJobBoard.jsx'
+import MainTheme from './interview-questions/ThemeToggle/MainTheme.jsx'
+import MainQuiz from './interview-questions/QuizGame/MainQuiz.jsx'
+import MainCurrencyConverter from './interview-questions/CurrencyConverter/MainCurrencyConverter.jsx'
 
 function App() {
   // const data = [
@@ -269,7 +272,10 @@ function App() {
       {/* <ItemPage/> */}
       {/* <Outlet/> */}
       {/* <AutoSearch/> */}
-      <MainJobBoard/>
+      {/* <MainJobBoard/> */}
+      {/* <MainTheme/> */}
+      {/* <MainQuiz/> */}
+      <MainCurrencyConverter/>
     </>
   )
 }

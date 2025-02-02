@@ -1,73 +1,64 @@
-import {useEffect, useState} from "react";
-import JobPosting from "./JobPosting.jsx";
+import React, { useEffect, useState } from 'react'
+import JobPosting from './JobPosting';
 
-const ITEMS_PER_PAGE = 6;
-const API_ENDPOINT = "https://hacker-news.firebaseio.com/v0";
+function MainJobBoard() {
+  const API_ENDPOINT = `https://hacker-news.firebaseio.com/v0`;
+  const [dataIds, setDataIds] = useState([]);
+  const [apiData, setApiData] = useState([]);
+  const [itemNumber, setItemNumber] = useState(10);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  console.log('Component Rendered..!!!')
+  useEffect(()=>{
+    ;(async function firstFetch() {
+      try {
+        const data = await fetch(`${API_ENDPOINT}/jobstories.json`);
+        const res = await data.json();
+        setDataIds(res);
+        console.log(res)
+      } catch (error) {
+        setError(error.message);
+      }
+    })()
+  },[])
 
-export default function JobApp() {
-  const [items, setItems] = useState([]);
-  const [itemIds, setItemIds] = useState(null);
-  const [fetchingDetails, setFetchingDetails] = useState(false);
-  const [currentPage, setCurrentPage] = useState(0);
-
-  async function fetchItems(currPage) {
-    setCurrentPage(currPage);
-    setFetchingDetails(true);
-
-    let itemsList = itemIds;
-    if (itemsList === null) {
-      const response = await fetch(`${API_ENDPOINT}/jobstories.json`);
-      itemsList = await response.json();
-      setItemIds(itemsList);
+  useEffect(()=>{
+    if(dataIds.length === 0) return;
+    ;(async function(){
+      try {
+        const data =  await Promise.all(
+          dataIds.map(id => 
+            fetch(`${API_ENDPOINT}/item/${id}.json`)
+              .then(res => res.json())
+          )
+        );
+        setApiData(data);
+      } catch (error) {
+        setError(error.message);
+      }finally {
+        setLoading(false);
     }
+  })()
+  },[dataIds])
 
-    const itemIdsForPage = itemsList.slice(
-      currPage * ITEMS_PER_PAGE,
-      currPage * ITEMS_PER_PAGE + ITEMS_PER_PAGE
-    );
-
-    const itemsForPage = await Promise.all(
-      itemIdsForPage.map((itemId) =>
-        fetch(`${API_ENDPOINT}/item/${itemId}.json`).then((response) =>
-          response.json()
-        )
-      )
-    );
-    setItems([...items, ...itemsForPage]);
-
-    setFetchingDetails(false);
-  }
-
-  useEffect(() => {
-    if (currentPage === 0) fetchItems(currentPage);
-  }, [currentPage]);
-
-  console.log("itemIds", itemIds);
-
+  if(loading) return (<h3>Loading...</h3>)
+  if(error) return (<h3>{error}</h3>)
+ 
   return (
-    <div className="custom-app">
-      <h1 className="custom-title">Hacker News Jobs Board</h1>
-      {itemIds === null || items.length < 1 ? (
-        <p className="custom-loading">Loading...</p>
-      ) : (
-        <div>
-          <div className="custom-items" role="list">
-            {items.map((item) => (
-              <JobPosting key={item.id} {...item} />
-            ))}
-          </div>
-          {items.length > 0 &&
-            currentPage * ITEMS_PER_PAGE + ITEMS_PER_PAGE < itemIds.length && (
-              <button
-                className={`custom-load-more-button`}
-                disabled={fetchingDetails}
-                onClick={() => fetchItems(currentPage + 1)}
-              >
-                {fetchingDetails ? "loading..." : "Load more jobs"}
-              </button>
-            )}
-        </div>
-      )}
-    </div>
-  );
+    <>
+      <div>
+        <h2>Job Board : </h2>
+        {
+          apiData.length > 0 && apiData.slice(0, itemNumber).map((data)=>(
+            <div key={data.id}>
+              <JobPosting url={data.url} title={data.title} time={data.time} by={data.by}/>
+            </div>
+          ))
+        }
+        <button disabled={itemNumber >= dataIds.length} onClick={()=> setItemNumber(prev => prev + 10)}>Show More</button>
+      </div>
+    </>
+  )
 }
+
+export default MainJobBoard

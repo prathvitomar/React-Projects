@@ -8,7 +8,7 @@ function JobPosting({url, by, time, title}) {
             className={url ? "" : "inactiveLink"}
             href={url}
             target="_blank"
-            rel="noopener" // security for opening new pages - Explain this indepth
+            rel="noopener"
           >
             {title}
           </a>
