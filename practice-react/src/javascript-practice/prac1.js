@@ -185,15 +185,37 @@
 //     console.log(obj[key]);
 // }
 
-let nums = {
-    a : 10,
-    b : 20,
-    c : 'House'
+// let nums = {
+//     a : 10,
+//     b : 20,
+//     c : 'House'
+// }
+// let ans;
+// for(let values in nums){
+//     if(typeof values === 'number'){
+//         ans.push(values*2);
+//     }
+// }
+// console.log(ans);
+
+
+let house1 = {
+    name : 'Bhopal',
+    city : 'Mumbai',
+    state : 'Madhya Pradesh'
 }
-let ans;
-for(let values in nums){
-    if(typeof values === 'number'){
-        ans.push(values*2);
-    }
+
+let house2 = {
+    name : 'Ujjain',
+    city : 'Bangalore',
+    state : 'Maharashtra'
 }
-console.log(ans);
+
+function print(laptop) {
+    console.log(this.name, this.city, this.state, laptop);
+}
+
+print.call(house1, "HP");
+print.apply(house1, ["HP"]);
+const printInfo = print.bind(house1, 'DELL');
+printInfo();

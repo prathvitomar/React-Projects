@@ -139,16 +139,73 @@
 // })
 // ---------------------------------------------------------------------------------------------------------
 
-async function loadJson(){
-    try {
-        const data = await fetch(`https://fakeurl.com/no-such-user.json`)
-        const res = await data.json()
-        return res
-    } catch (error) {
-        // throw new Error(`Failed to load : ${error.message}`)        
-        console.log(error)
-    }
-}
+// async function loadJson(){
+//     try {
+//         const data = await fetch(`https://fakeurl.com/no-such-user.json`)
+//         const res = await data.json()
+//         return res
+//     } catch (error) {
+//         // throw new Error(`Failed to load : ${error.message}`)        
+//         console.log(error)
+//     }
+// }
 
-const p = loadJson();
-console.log(p)
+// const p = loadJson();
+// console.log(p)
+
+
+
+
+// const cart =  () =>{
+//     return new Promise((resolve, reject)=>{
+//         resolve(12345);
+//     })
+// }
+
+// const availableCart = () => {
+//     return true;
+// }
+
+// const orderProduct = (promise) => {
+//     let p = new Promise((resolve, reject) => {
+//         if(availableCart()){
+//             promise().then(resolve).catch(reject);
+//         }
+//         else{
+//             reject("Promise rejected")
+//         }
+//     })
+//     return p;
+// }
+
+// orderProduct(cart).then(data => console.log(data)).catch(err => console.log(err));
+
+
+// const p1 = new Promise((resolve, reject) => setTimeout(()=> reject("First Promise Resolved"), 2000));
+// const p2 = new Promise((resolve, reject) => setTimeout(()=> resolve("Second Promise Resolved"), 1000));
+// const p3 = new Promise((resolve, reject) => setTimeout(()=> resolve("Third Promise Resolved"), 3000));
+
+// const promiseAll = Promise.all([p1,p2,p3]).then((res) => console.log(res)).catch((err) => console.log(err));
+
+
+
+// const p1 = new Promise((resolve, reject) => setTimeout(()=> reject("First Promise Resolved"), 2000));
+// const p2 = new Promise((resolve, reject) => setTimeout(()=> reject("Second Promise Resolved"), 1000));
+// const p3 = new Promise((resolve, reject) => setTimeout(()=> resolve("Third Promise Resolved"), 3000));
+
+// const promiseAllSettled = Promise.allSettled([p1,p2,p3]).then((res) => console.log(res));
+
+
+
+// const p1 = new Promise((resolve, reject) => setTimeout(()=> reject("First Promise Resolved"), 2000));
+// const p2 = new Promise((resolve, reject) => setTimeout(()=> reject("Second Promise Resolved"), 1000));
+// const p3 = new Promise((resolve, reject) => setTimeout(()=> reject("Third Promise Resolved"), 3000));
+
+// const promiseRace = Promise.race([p1,p2,p3]).then((res) => console.log(res)).catch((err) => console.log(err));
+
+
+// const p1 = new Promise((resolve, reject) => setTimeout(()=> resolve("First Promise Resolved"), 2000));
+// const p2 = new Promise((resolve, reject) => setTimeout(()=> reject("Second Promise Resolved"), 1000));
+// const p3 = new Promise((resolve, reject) => setTimeout(()=> reject("Third Promise Resolved"), 3000));
+
+// const promiseAny = Promise.any([p1,p2,p3]).then((res) => console.log(res)).catch((err) => console.log(err));

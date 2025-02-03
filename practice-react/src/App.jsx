@@ -65,6 +65,8 @@ import MainJobBoard from './interview-questions/JobBoard/MainJobBoard.jsx'
 import MainTheme from './interview-questions/ThemeToggle/MainTheme.jsx'
 import MainQuiz from './interview-questions/QuizGame/MainQuiz.jsx'
 import MainCurrencyConverter from './interview-questions/CurrencyConverter/MainCurrencyConverter.jsx'
+import Memo from './react-coding-practice/Memo.jsx'
+import Item from './Item.jsx'
 
 function App() {
   // const data = [
@@ -275,7 +277,10 @@ function App() {
       {/* <MainJobBoard/> */}
       {/* <MainTheme/> */}
       {/* <MainQuiz/> */}
-      <MainCurrencyConverter/>
+      {/* <MainCurrencyConverter/> */}
+      {/* <MainOTPlogin/> */}
+      {/* <Memo/> */}
+      <Item/>
     </>
   )
 }
