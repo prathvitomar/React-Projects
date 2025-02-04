@@ -1,34 +1,52 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function Pagination2() {
-    const arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34]
-    const itemsPerPage = 5;
-    const totalPages = Math.ceil(arr.length / itemsPerPage);
-    const [pagination, setPagination] = useState(0);
-    const pageData = arr.slice(pagination * itemsPerPage, (pagination + 1) * itemsPerPage);
+    const API_ENDPOINT = "https://dummyjson.com/products"
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [products, setProducts] = useState([]);
+    const [skip, setSkip] = useState(10);
+    
+    useEffect(()=>{
+        ;(async function (){
+            try {
+                setLoading(true);
+                setError(null);
+                let limit = 10;
+                const data = await fetch(`${API_ENDPOINT}/?limit=${limit}&skip=${skip}`)
+                const res = await data.json();
+                setProducts(res.products);
+            } catch (error) {
+                setError(error.message)
+            } finally {
+                setLoading(false);
+            }
+        })()
+    },[skip])
 
-    function handlePagination(value){
-        if(value === 'prev'){
-            if(pagination === 0) return
-            setPagination(prev => prev - 1);
-        }
-        else if(value === 'next'){
-            if (pagination === totalPages - 1) return;
-            setPagination(next => next + 1);
-        }
+    function handlePrev(){
+        setSkip(prev => prev - 10);
     }
 
-  return (
+    function handleNext(){
+        setSkip(prev => prev + 10);
+    }
+
+    if (loading) return (<h1>Loading...</h1>)
+    if (error) return (<h1>{error}</h1>)
+
+  return(
     <>
         {
-            pageData.map((item, i)=>(
-                <ul key={i}>
-                    <li>{item}</li>
-                </ul>
+            products.length > 0 && products.map((product) =>(
+                <div key={product.id}>
+                    <h1>{product.title}</h1>
+                    <p>{product.description}</p>
+                </div>
             ))
         }
-        <button onClick={() => handlePagination('prev')}>Prev</button>
-        <button onClick={() => handlePagination('next')}>Next</button>
+        <button disabled={skip === 10} onClick={handlePrev}>Prev</button>
+        <button onClick={handleNext}>Next</button>
     </>
   )
 }

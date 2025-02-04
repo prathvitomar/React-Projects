@@ -66,7 +66,8 @@ import MainTheme from './interview-questions/ThemeToggle/MainTheme.jsx'
 import MainQuiz from './interview-questions/QuizGame/MainQuiz.jsx'
 import MainCurrencyConverter from './interview-questions/CurrencyConverter/MainCurrencyConverter.jsx'
 import Memo from './react-coding-practice/Memo.jsx'
-import Item from './Item.jsx'
+import OptionChallenge from './react-coding-practice/OptionChallenge.jsx'
+import FormPractice from './react-coding-practice/FormPractice.jsx'
 
 function App() {
   // const data = [
@@ -280,7 +281,8 @@ function App() {
       {/* <MainCurrencyConverter/> */}
       {/* <MainOTPlogin/> */}
       {/* <Memo/> */}
-      <Item/>
+      {/* <OptionChallenge/> */}
+      <FormPractice/>
     </>
   )
 }
