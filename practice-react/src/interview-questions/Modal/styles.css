@@ -1,0 +1,10 @@
+.folder{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.child-folder{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 15px;
+}

@@ -132,3 +132,47 @@
 //     return arr.flat();
 // }
 // console.log(flatten(arr))
+
+
+// function removesDup(arr){
+//     // return [...new Set(arr)];
+//     let result = [];
+//     let obj = {};
+//     for(let i=0; i<arr.length; i++){
+//         if(obj[arr[i]]){
+//             obj[arr[i]] += 1;
+//         }else{
+//             obj[arr[i]] = 1;
+//         }
+//     }
+//     for(let key in obj){
+//         result.push(key); 
+//     }
+//     return result;
+// }
+// console.log(removesDup([1,2,3,4,2,1,6,8,9]))
+
+
+
+// function minAndMax(arr){
+//     let min = Infinity, max = -Infinity;
+//     min = Math.min(...arr);
+//     max = Math.max(...arr);
+//     return [min, max];
+// }
+// console.log(minAndMax([1,2,3,4,2,1,6,8,9]))
+
+
+function flatten(arr){
+    let result = [];
+    for(let i = 0; i < arr.length;i++){
+        if(Array.isArray(arr[i])){
+            result = result.concat(flatten(arr[i]));
+        }
+        else{
+            result.push(arr[i]);
+        }
+    }
+    return result;
+}
+console.log(flatten([1,[2,3],[4,[2],1,6],[8],9]))
