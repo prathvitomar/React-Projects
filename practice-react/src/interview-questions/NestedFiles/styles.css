@@ -1,6 +1,7 @@
 .folder{
     display: flex;
     justify-content: flex-start;
+    cursor: pointer;
 }
 
 .child-folder{
