@@ -69,6 +69,8 @@ import Memo from './react-coding-practice/Memo.jsx'
 import OptionChallenge from './react-coding-practice/OptionChallenge.jsx'
 import FormPractice from './react-coding-practice/FormPractice.jsx'
 import MainModel from './interview-questions/NestedFiles/MainModal.jsx'
+import Modal from './interview-questions/Modal/components/Modal.jsx'
+import MainProgressBar from './interview-questions/ProgressBar/MainProgressBar.jsx'
 
 function App() {
   // const data = [
@@ -284,7 +286,9 @@ function App() {
       {/* <Memo/> */}
       {/* <OptionChallenge/> */}
       {/* <FormPractice/> */}
-      <MainModel/>
+      {/* <MainModel/> */}
+      {/* <Modal/> */}
+      <MainProgressBar/>
     </>
   )
 }
