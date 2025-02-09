@@ -71,6 +71,11 @@ import FormPractice from './react-coding-practice/FormPractice.jsx'
 import MainModel from './interview-questions/NestedFiles/MainModal.jsx'
 import Modal from './interview-questions/Modal/components/Modal.jsx'
 import MainProgressBar from './interview-questions/ProgressBar/MainProgressBar.jsx'
+import MainGridLights from './interview-questions/GridLights/MainGridLights.jsx'
+import MainAccordian from './interview-questions/Accodian/MainAccordian.jsx'
+import MainRandomColor from './interview-questions/RandomColor/MainRandomColor.jsx'
+import MainStarRating from './interview-questions/StarRating/MainStarRating.jsx'
+import MainSlider from './interview-questions/ImageSlider/MainSlider.jsx'
 
 function App() {
   // const data = [
@@ -288,7 +293,12 @@ function App() {
       {/* <FormPractice/> */}
       {/* <MainModel/> */}
       {/* <Modal/> */}
-      <MainProgressBar/>
+      {/* <MainProgressBar/> */}
+      {/* <MainGridLights/> */}
+      {/* <MainAccordian/> */}
+      {/* <MainRandomColor/> */}
+      {/* <MainStarRating/> */}
+      <MainSlider/>
     </>
   )
 }

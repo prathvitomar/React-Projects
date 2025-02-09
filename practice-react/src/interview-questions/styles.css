@@ -1,0 +1,33 @@
+.main-div {
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.slider-main{
+    height: 300px;
+    width: 500px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.slider{
+    height: 300px;
+    width: 500px;
+    overflow: hidden;
+}
+
+.image{
+    height: 300px;
+    width: 500px;
+}
+
+.dot-main{
+    display: flex;
+    justify-content: start;
+}
+
+.dot{
+    margin: 10px;
+    cursor: pointer;
+}
