@@ -76,6 +76,13 @@ import MainAccordian from './interview-questions/Accodian/MainAccordian.jsx'
 import MainRandomColor from './interview-questions/RandomColor/MainRandomColor.jsx'
 import MainStarRating from './interview-questions/StarRating/MainStarRating.jsx'
 import MainSlider from './interview-questions/ImageSlider/MainSlider.jsx'
+import MainTreeView from './interview-questions/TreeView/MainTreeView.jsx'
+import MainQRcode from './interview-questions/QRCodeGenerator/MainQRcode.jsx'
+import MainTheme2 from './interview-questions/ToggleTheme/MainTheme2.jsx'
+import MainScroll from './interview-questions/ScrollIndicator/MainScroll.jsx'
+import MainTab from './interview-questions/Tabs/MainTab.jsx'
+import Main from './interview-questions/GithubProfile/Main.jsx'
+import MainSearch2 from './interview-questions/Search/MainSearch2.jsx'
 
 function App() {
   // const data = [
@@ -298,7 +305,14 @@ function App() {
       {/* <MainAccordian/> */}
       {/* <MainRandomColor/> */}
       {/* <MainStarRating/> */}
-      <MainSlider/>
+      {/* <MainSlider/> */}
+      {/* <MainTreeView/> */}
+      {/* <MainQRcode/> */}
+      {/* <MainTheme2/> */}
+      {/* <MainScroll/> */}
+      {/* <MainTab/> */}
+      {/* <Main/> */}
+      <MainSearch2/>
     </>
   )
 }
