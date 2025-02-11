@@ -83,6 +83,9 @@ import MainScroll from './interview-questions/ScrollIndicator/MainScroll.jsx'
 import MainTab from './interview-questions/Tabs/MainTab.jsx'
 import Main from './interview-questions/GithubProfile/Main.jsx'
 import MainSearch2 from './interview-questions/Search/MainSearch2.jsx'
+import MainForm from './interview-questions/ContactForm/MainForm.jsx'
+import MainProgress2 from './interview-questions/ProgressBar2/MainProgressBar.jsx'
+import MainDebounce from './interview-questions/Debounce/MainDebounce.jsx'
 
 function App() {
   // const data = [
@@ -312,7 +315,10 @@ function App() {
       {/* <MainScroll/> */}
       {/* <MainTab/> */}
       {/* <Main/> */}
-      <MainSearch2/>
+      {/* <MainSearch2/> */}
+      {/* <MainForm/> */}
+      {/* <MainProgress2/> */}
+      <MainDebounce/>
     </>
   )
 }
