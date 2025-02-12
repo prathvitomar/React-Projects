@@ -86,6 +86,9 @@ import MainSearch2 from './interview-questions/Search/MainSearch2.jsx'
 import MainForm from './interview-questions/ContactForm/MainForm.jsx'
 import MainProgress2 from './interview-questions/ProgressBar2/MainProgressBar.jsx'
 import MainDebounce from './interview-questions/Debounce/MainDebounce.jsx'
+import MainWeather from './interview-questions/WeatherApp/MainWeather.jsx'
+import MainDropdown from './interview-questions/ProductDropdown/MainDropDown.jsx'
+import MainTimer2 from './interview-questions/Timer2/MainTimer2.jsx'
 
 function App() {
   // const data = [
@@ -318,7 +321,10 @@ function App() {
       {/* <MainSearch2/> */}
       {/* <MainForm/> */}
       {/* <MainProgress2/> */}
-      <MainDebounce/>
+      {/* <MainDebounce/> */}
+      {/* <MainWeather/> */}
+      {/* <MainDropdown/> */}
+      <MainTimer2/>
     </>
   )
 }

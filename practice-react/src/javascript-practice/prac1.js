@@ -199,23 +199,32 @@
 // console.log(ans);
 
 
-let house1 = {
-    name : 'Bhopal',
-    city : 'Mumbai',
-    state : 'Madhya Pradesh'
-}
+// let house1 = {
+//     name : 'Bhopal',
+//     city : 'Mumbai',
+//     state : 'Madhya Pradesh'
+// }
 
-let house2 = {
-    name : 'Ujjain',
-    city : 'Bangalore',
-    state : 'Maharashtra'
-}
+// let house2 = {
+//     name : 'Ujjain',
+//     city : 'Bangalore',
+//     state : 'Maharashtra'
+// }
 
-function print(laptop) {
-    console.log(this.name, this.city, this.state, laptop);
-}
+// function print(laptop) {
+//     console.log(this.name, this.city, this.state, laptop);
+// }
 
-print.call(house1, "HP");
-print.apply(house1, ["HP"]);
-const printInfo = print.bind(house1, 'DELL');
-printInfo();
+// print.call(house1, "HP");
+// print.apply(house1, ["HP"]);
+// const printInfo = print.bind(house1, 'DELL');
+// printInfo();
+
+
+// var x = 10;
+// function test() {
+//   console.log(x);
+//   var x = 20;
+//   console.log(x);
+// }
+// test();
