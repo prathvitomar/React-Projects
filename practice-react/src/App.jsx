@@ -89,6 +89,7 @@ import MainDebounce from './interview-questions/Debounce/MainDebounce.jsx'
 import MainWeather from './interview-questions/WeatherApp/MainWeather.jsx'
 import MainDropdown from './interview-questions/ProductDropdown/MainDropDown.jsx'
 import MainTimer2 from './interview-questions/Timer2/MainTimer2.jsx'
+import TabForm from './interview-questions/TabForm/components/TabForm.jsx'
 
 function App() {
   // const data = [
@@ -324,7 +325,8 @@ function App() {
       {/* <MainDebounce/> */}
       {/* <MainWeather/> */}
       {/* <MainDropdown/> */}
-      <MainTimer2/>
+      {/* <MainTimer2/> */}
+      <TabForm/>
     </>
   )
 }
