@@ -326,7 +326,8 @@ function App() {
       {/* <MainWeather/> */}
       {/* <MainDropdown/> */}
       {/* <MainTimer2/> */}
-      <TabForm/>
+      {/* <TabForm/> */}
+      <MainPagination/>
     </>
   )
 }

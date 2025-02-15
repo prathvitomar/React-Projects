@@ -23,8 +23,9 @@ export default function Timer({duration}){
         let total_seconds = totalSecond%60;
         let total_minutes = totalMinutes%60;
         let total_hours = totalHours%24;
+        let total_days = totalHours%24;
 
-        return `Days : ${totalDays}, Hours : ${total_hours}, Minutes : ${total_minutes}, Seconds : ${total_seconds}`;
+        return `Days : ${total_days}, Hours : ${total_hours}, Minutes : ${total_minutes}, Seconds : ${total_seconds}`;
     }
 
     if(miliSeconds>0){

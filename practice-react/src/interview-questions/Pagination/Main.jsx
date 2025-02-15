@@ -1,81 +1,62 @@
-import React from 'react'
-import { useEffect } from 'react';
-import { useState } from 'react'
+import React, { useState } from "react";
+import useFetch from "./hooks/useFetch";
+import ProductCard from "./components/ProductCard";
+import { PAGE_SIZES } from "./constants/constants.js";
+import Pagination from "./components/Pagination.jsx";
+import PageOptions from "./components/PageOptions.jsx";
 
 function Main() {
-    const [itemNumber, setItemNumber] = useState(5);
-    const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState("");
-    const [pageNumber, setPageNumber] = useState(1);
-    const itemsNum = [5,10,15,20];
+  const { data, loading, error } = useFetch("https://dummyjson.com/product");
+  const [activePage, setActivePage] = useState(0);
+  const [selectedPageSize, setSelectedPageSize] = useState(PAGE_SIZES[0]);
+  const totalLength = data && data.products ? data.products.length : 0;
+  const totalPages = Math.ceil(totalLength / selectedPageSize);
+  const start = activePage * selectedPageSize;
+  const end = start + selectedPageSize;
 
-    useEffect(()=>{
-        async function fetchData(){
-            setLoading(true);
-            setError("");
-            try {
-                const skip = (pageNumber - 1) * itemNumber;
-                const resData = await fetch(`https://dummyjson.com/product?limit=${itemNumber}&skip=${skip}`)
-                const res = await resData.json();
-                setData(res.products);
-                setLoading(false);
-            } catch (error) {
-                setLoading(false);
-                setError(error.message || "Something went wrong"); 
-                setPageNumber(1);
-            }
-        }
-        fetchData()
-    },[itemNumber, pageNumber]);
+  function handlePageNumber(id) {
+    setActivePage(id);
+  }
 
-    function handleItems(event){
-        setItemNumber(event.target.value)
-    }
+  function handlePrev() {
+    if (activePage === 0) return;
+    setActivePage((prev) => prev - 1);
+  }
 
-    function handlePrev(){
-        setPageNumber(prev => prev - 1);
-    }
+  function handleNext() {
+    if (activePage === totalPages - 1) return;
+    setActivePage((prev) => prev + 1);
+  }
 
-    function handleNext(){
-        setPageNumber(prev => prev + 1);
-    }
+  if (error) return <h5>{error}</h5>;
 
-    if (loading) return <h2>Loading....</h2>
-    if (error) return <h2>{error}</h2>
-
-    console.log(data);
+  if (loading) return <h5>Loading...</h5>;
 
   return (
     <>
+      <div className="products-main">
+        <div>{data && <ProductCard data={data} start={start} end={end} />}</div>
         <div>
-            <div>
-                <select value={itemNumber} onChange={handleItems}>
-                    {
-                        itemsNum.map((num)=>(
-                            <option key={num} value={num}>{num}</option>
-                        ))
-                    }
-                </select>
-                <h1>All Products</h1>
-                {
-                    data?.length > 0 && data.map((item) =>(
-                        <li key={item.id}>{item.title}</li>
-                    ))
-                }
-            </div>
-            <div>
-                <button disabled={pageNumber==1} onClick={handlePrev}>Prev</button>
-                <button onClick={handleNext}>Next</button>
-            </div>
+          {PAGE_SIZES && (
+            <PageOptions
+              PAGE_SIZES={PAGE_SIZES}
+              selectedPageSize={selectedPageSize}
+              setSelectedPageSize={setSelectedPageSize}
+            />
+          )}
         </div>
+      </div>
+      <div className="pagination-main">
+        <Pagination
+          activePage={activePage}
+          handleNext={handleNext}
+          handlePrev={handleNext}
+          totalPages={totalPages}
+          handlePageNumber={handlePageNumber}
+        />
+      </div>
     </>
-  )
+  );
 }
 
-export default Main
-
-
-
-
-// https://dummyjson.com/product?limit=${itemNumber}&skip=${skip}
+export default Main;

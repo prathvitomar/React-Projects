@@ -125,3 +125,44 @@
   .error {
     color: red;
   }
+
+  .product{
+    height: 200px;
+    width: 300px;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 5px;
+  }
+
+  .product-card{
+    display: grid;
+    grid-column: auto;
+  }
+
+  .pagination{
+    margin: 10px;
+    display: flex;
+    
+  }
+
+  .page{
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid black;
+  }
+
+  .buttons{
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .products-main{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .pagination-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
