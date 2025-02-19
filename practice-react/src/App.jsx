@@ -91,6 +91,9 @@ import MainDropdown from './interview-questions/ProductDropdown/MainDropDown.jsx
 import MainTimer2 from './interview-questions/Timer2/MainTimer2.jsx'
 import TabForm from './interview-questions/TabForm/components/TabForm.jsx'
 import Quiz from './interview-questions/Quiz/Quiz.jsx'
+import MainCounter from './interview-questions/UnDoableCounter/MainCounter.jsx'
+import MainShoppingList from './interview-questions/ShoppingList/MainShoppingList.jsx'
+import MainCrypto from './interview-questions/CryptoConverter/MainCrypto.jsx'
 
 function App() {
   // const data = [
@@ -329,7 +332,10 @@ function App() {
       {/* <MainTimer2/> */}
       {/* <TabForm/> */}
       {/* <MainPagination/> */}
-      <Quiz/>
+      {/* <Quiz/> */}
+      {/* <MainCounter/> */}
+      {/* <MainShoppingList/> */}
+      <MainCrypto/>
     </>
   )
 }
