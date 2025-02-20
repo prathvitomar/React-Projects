@@ -94,6 +94,9 @@ import Quiz from './interview-questions/Quiz/Quiz.jsx'
 import MainCounter from './interview-questions/UnDoableCounter/MainCounter.jsx'
 import MainShoppingList from './interview-questions/ShoppingList/MainShoppingList.jsx'
 import MainCrypto from './interview-questions/CryptoConverter/MainCrypto.jsx'
+import MainDataVisual from './interview-questions/DataFetching&Visualization/MainDataVisual.jsx'
+import MainTwoFactorCode from './interview-questions/TwoFactorCodeInput/MainTwoFactorCode.jsx'
+import MainTicTacToe from './interview-questions/TicTacToe/MainTicTacToe.jsx'
 
 function App() {
   // const data = [
@@ -335,7 +338,10 @@ function App() {
       {/* <Quiz/> */}
       {/* <MainCounter/> */}
       {/* <MainShoppingList/> */}
-      <MainCrypto/>
+      {/* <MainCrypto/> */}
+      {/* <MainDataVisual/> */}
+      {/* <MainTwoFactorCode/> */}
+      <MainTicTacToe/>
     </>
   )
 }
