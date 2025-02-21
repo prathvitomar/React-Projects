@@ -97,6 +97,8 @@ import MainCrypto from './interview-questions/CryptoConverter/MainCrypto.jsx'
 import MainDataVisual from './interview-questions/DataFetching&Visualization/MainDataVisual.jsx'
 import MainTwoFactorCode from './interview-questions/TwoFactorCodeInput/MainTwoFactorCode.jsx'
 import MainTicTacToe from './interview-questions/TicTacToe/MainTicTacToe.jsx'
+import MainSelectableGrid from './interview-questions/SelectableGrid/MainSelectableGrid.jsx'
+import MainThrottle from './interview-questions/useThrottleHook/MainThrottle.jsx'
 
 function App() {
   // const data = [
@@ -341,7 +343,9 @@ function App() {
       {/* <MainCrypto/> */}
       {/* <MainDataVisual/> */}
       {/* <MainTwoFactorCode/> */}
-      <MainTicTacToe/>
+      {/* <MainTicTacToe/> */}
+      {/* <MainSelectableGrid rows={10} cols={10}/> */}
+      <MainThrottle/>
     </>
   )
 }
