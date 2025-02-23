@@ -320,7 +320,7 @@ function App() {
       {/* <MainGridLights/> */}
       {/* <MainAccordian/> */}
       {/* <MainRandomColor/> */}
-      {/* <MainStarRating/> */}
+      <MainStarRating length={8}/>
       {/* <MainSlider/> */}
       {/* <MainTreeView/> */}
       {/* <MainQRcode/> */}
@@ -345,7 +345,7 @@ function App() {
       {/* <MainTwoFactorCode/> */}
       {/* <MainTicTacToe/> */}
       {/* <MainSelectableGrid rows={10} cols={10}/> */}
-      <MainThrottle/>
+      {/* <MainThrottle/> */}
     </>
   )
 }

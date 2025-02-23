@@ -1,18 +1,51 @@
-import { useState } from "react"
+import React, { useEffect, useRef, useState } from 'react'
+import "./style.css"
+function MainStarRating({length = 5}) {
+    const [clickedStar, setClickedStar] = useState(0);
+    const starRef = useRef(null);
 
-export default function MainStarRating(){
-    const [selectedStars, setSelectedStars] = useState(0);
-    const stars = [1,2,3,4,5,6,7,8];
-    return (
-        <>
-            <h1>Main Star Rating</h1>
+    useEffect(()=>{
+        window.addEventListener('click', clickOutside);
+        return ()=>{
+        window.removeEventListener('click', clickOutside);
+        }
+    },[])
+
+    function clickOutside(event){
+        if(starRef.current && !starRef.current.contains(event.target)){
+            setClickedStar(0)
+        }
+    }
+
+    function handleStar(star){
+        setClickedStar(star + 1)
+    }
+
+  return (
+    <>
+        <div style={{
+            display : 'flex',
+            width : 'auto',
+            height : 'auto',
+            border : '1px solid black'
+        }}
+        ref={starRef}
+        >
             {
-                stars.map(star =>(
-                    <div key={star}>
-                        <img src="./assets/icons8-star-100.png" alt="" />
+                [...Array(length).keys()].map((star)=>(
+                    <div className={`${star < clickedStar ? "clicked" : ""}`} style={{
+                        padding : '5px',
+                        border : '1px solid black',
+                        margin : '5px',
+                        cursor : 'pointer'
+                    }} onClick={()=> handleStar(star)} key={star}>
+                        <span>{star + 1}</span>
                     </div>
                 ))
             }
-        </>
-    )
+        </div>
+    </>
+  )
 }
+
+export default MainStarRating

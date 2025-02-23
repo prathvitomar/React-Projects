@@ -1,32 +1,30 @@
 import React, { useEffect, useState } from 'react'
-import useThrottle from './useThrottle';
+import useThrottle from './useThrottle'
 
 function MainThrottle() {
     const [resize, setResize] = useState({
         width : window.innerWidth,
         height : window.innerHeight
-    });
-
-    const handleThrottle = useThrottle(handleResize, 500);
-
-    useEffect(() =>{
-        window.addEventListener("resize", handleThrottle);
-        return ()=>{
-            window.removeEventListener("resize", handleThrottle);
-        }
-    },[])
-
-    function handleResize() {
+    })
+    
+    function handleResize (){
         setResize({
             width : window.innerWidth,
-            height : window.innerHeight
+            height : window.innerHeight 
         })
     }
+    
+    const throttledValue = useThrottle(handleResize, 1000);
+
+    useEffect(()=>{
+        window.addEventListener("resize", throttledValue)
+        return ()=>{
+        window.removeEventListener("resize", throttledValue)
+        }
+    },[throttledValue])
 
   return (
-    <>
-        <h1>{resize.width} X {resize.height}</h1>
-    </>
+    <div>{resize.width} x {resize.height}</div>
   )
 }
 

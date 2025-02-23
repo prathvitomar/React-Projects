@@ -1,23 +1,25 @@
-.div-page{
-    height: 100vh;
-    width: 100vw;
-}
-
-.div-size{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    width: 400px;
-    border: 2px solid black;
-}
-
-.light{
+[data-theme="light"]
+{
     background-color: white;
     color: black;
 }
 
-.dark{
+[data-theme="dark"]{
     background-color: black;
     color: white;
+}
+
+.center-div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
