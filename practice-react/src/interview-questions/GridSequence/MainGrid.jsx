@@ -1,7 +1,7 @@
 import "./styles.css";
 import {useState} from "react";
 
-function MainCell({filled, onClick, isDisabled, label}) {
+function MainGrid({filled, onClick, isDisabled, label}) {
   return (
     <button
       type="button"
