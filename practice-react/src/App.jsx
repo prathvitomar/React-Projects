@@ -99,6 +99,9 @@ import MainTwoFactorCode from './interview-questions/TwoFactorCodeInput/MainTwoF
 import MainTicTacToe from './interview-questions/TicTacToe/MainTicTacToe.jsx'
 import MainSelectableGrid from './interview-questions/SelectableGrid/MainSelectableGrid.jsx'
 import MainThrottle from './interview-questions/useThrottleHook/MainThrottle.jsx'
+import MainSwapList from './interview-questions/SwapListItems/MainSwapList.jsx'
+import MainDynamicForm from './interview-questions/DynamicForm/MainDynamicForm.jsx'
+import MainFormField from './interview-questions/FormFieldCaps/MainFormField.jsx'
 
 function App() {
   // const data = [
@@ -320,7 +323,7 @@ function App() {
       {/* <MainGridLights/> */}
       {/* <MainAccordian/> */}
       {/* <MainRandomColor/> */}
-      <MainStarRating length={8}/>
+      {/* <MainStarRating length={8}/> */}
       {/* <MainSlider/> */}
       {/* <MainTreeView/> */}
       {/* <MainQRcode/> */}
@@ -346,6 +349,9 @@ function App() {
       {/* <MainTicTacToe/> */}
       {/* <MainSelectableGrid rows={10} cols={10}/> */}
       {/* <MainThrottle/> */}
+      {/* <MainSwapList/> */}
+      {/* <MainDynamicForm/> */}
+      <MainFormField/>
     </>
   )
 }
