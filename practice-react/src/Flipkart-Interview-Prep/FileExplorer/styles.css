@@ -1,0 +1,12 @@
+.files {
+    margin-left: 10px;
+}
+
+.files_{
+    padding-left: 10px;
+    border: 1px solid black;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

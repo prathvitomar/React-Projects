@@ -102,6 +102,7 @@ import MainThrottle from './interview-questions/useThrottleHook/MainThrottle.jsx
 import MainSwapList from './interview-questions/SwapListItems/MainSwapList.jsx'
 import MainDynamicForm from './interview-questions/DynamicForm/MainDynamicForm.jsx'
 import MainFormField from './interview-questions/FormFieldCaps/MainFormField.jsx'
+import FlipkartFileExplorer from './Flipkart-Interview-Prep/FileExplorer/FlipkartFileExplorer.jsx'
 
 function App() {
   // const data = [
@@ -351,7 +352,8 @@ function App() {
       {/* <MainThrottle/> */}
       {/* <MainSwapList/> */}
       {/* <MainDynamicForm/> */}
-      <MainFormField/>
+      {/* <MainFormField/> */}
+      <FlipkartFileExplorer/>
     </>
   )
 }
