@@ -103,6 +103,7 @@ import MainSwapList from './interview-questions/SwapListItems/MainSwapList.jsx'
 import MainDynamicForm from './interview-questions/DynamicForm/MainDynamicForm.jsx'
 import MainFormField from './interview-questions/FormFieldCaps/MainFormField.jsx'
 import FlipkartFileExplorer from './Flipkart-Interview-Prep/FileExplorer/FlipkartFileExplorer.jsx'
+import FlipkartPagination from './Flipkart-Interview-Prep/Pagination/FlipkartPagination.jsx'
 
 function App() {
   // const data = [
@@ -353,7 +354,8 @@ function App() {
       {/* <MainSwapList/> */}
       {/* <MainDynamicForm/> */}
       {/* <MainFormField/> */}
-      <FlipkartFileExplorer/>
+      {/* <FlipkartFileExplorer/> */}
+      <FlipkartPagination/>
     </>
   )
 }
