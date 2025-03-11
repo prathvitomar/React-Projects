@@ -105,6 +105,7 @@ import MainFormField from './interview-questions/FormFieldCaps/MainFormField.jsx
 import FlipkartFileExplorer from './Flipkart-Interview-Prep/FileExplorer/FlipkartFileExplorer.jsx'
 import FlipkartPagination from './Flipkart-Interview-Prep/Pagination/FlipkartPagination.jsx'
 import MainPolyfills from './Flipkart-Interview-Prep/HooksPolyfills/MainPolyfills.jsx'
+import FlipkartProgressBar from './Flipkart-Interview-Prep/ProgressBar/FlipkartProgressBar.jsx'
 
 function App() {
   // const data = [
@@ -357,7 +358,8 @@ function App() {
       {/* <MainFormField/> */}
       {/* <FlipkartFileExplorer/> */}
       {/* <FlipkartPagination/> */}
-      <MainPolyfills/>
+      {/* <MainPolyfills/> */}
+      <FlipkartProgressBar/>
     </>
   )
 }
