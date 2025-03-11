@@ -106,6 +106,8 @@ import FlipkartFileExplorer from './Flipkart-Interview-Prep/FileExplorer/Flipkar
 import FlipkartPagination from './Flipkart-Interview-Prep/Pagination/FlipkartPagination.jsx'
 import MainPolyfills from './Flipkart-Interview-Prep/HooksPolyfills/MainPolyfills.jsx'
 import FlipkartProgressBar from './Flipkart-Interview-Prep/ProgressBar/FlipkartProgressBar.jsx'
+import FlipkartThemeToggle from './Flipkart-Interview-Prep/ThemeToggle/FlipkartThemeToggle.jsx'
+import FlipkartTabForm from './Flipkart-Interview-Prep/TabForm/FlipkartTabForm.jsx'
 
 function App() {
   // const data = [
@@ -359,7 +361,9 @@ function App() {
       {/* <FlipkartFileExplorer/> */}
       {/* <FlipkartPagination/> */}
       {/* <MainPolyfills/> */}
-      <FlipkartProgressBar/>
+      {/* <FlipkartProgressBar/> */}
+      {/* <FlipkartThemeToggle/> */}
+      <FlipkartTabForm/>
     </>
   )
 }
