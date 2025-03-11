@@ -104,6 +104,7 @@ import MainDynamicForm from './interview-questions/DynamicForm/MainDynamicForm.j
 import MainFormField from './interview-questions/FormFieldCaps/MainFormField.jsx'
 import FlipkartFileExplorer from './Flipkart-Interview-Prep/FileExplorer/FlipkartFileExplorer.jsx'
 import FlipkartPagination from './Flipkart-Interview-Prep/Pagination/FlipkartPagination.jsx'
+import MainPolyfills from './Flipkart-Interview-Prep/HooksPolyfills/MainPolyfills.jsx'
 
 function App() {
   // const data = [
@@ -355,7 +356,8 @@ function App() {
       {/* <MainDynamicForm/> */}
       {/* <MainFormField/> */}
       {/* <FlipkartFileExplorer/> */}
-      <FlipkartPagination/>
+      {/* <FlipkartPagination/> */}
+      <MainPolyfills/>
     </>
   )
 }
