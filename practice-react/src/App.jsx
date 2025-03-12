@@ -368,8 +368,8 @@ function App() {
       {/* <FlipkartThemeToggle/> */}
       {/* <FlipkartTabForm/> */}
       {/* <FlipkartQuizApp /> */}
-      {/* <FlipkartAutoComplete/> */}
-      <FlipkartStarRating/>
+      <FlipkartAutoComplete/>
+      {/* <FlipkartStarRating/> */}
     </>
   );
 }
