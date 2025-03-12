@@ -1,0 +1,13 @@
+.search-item {
+    width: 300px;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 8px;
+  }
+  
+  .search-item:hover, 
+  .search-item.hovering { /* Apply hover effect */
+    background-color: gray;
+    color: white;
+  }
+  
