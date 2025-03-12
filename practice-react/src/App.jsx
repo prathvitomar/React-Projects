@@ -112,6 +112,7 @@ import FlipkartThemeToggle from "./Flipkart-Interview-Prep/ThemeToggle/FlipkartT
 import FlipkartTabForm from "./Flipkart-Interview-Prep/TabForm/FlipkartTabForm.jsx";
 import FlipkartQuizApp from "./Flipkart-Interview-Prep/QuizApp/FlipkartQuizApp.jsx";
 import FlipkartAutoComplete from "./Flipkart-Interview-Prep/AutoCompleteSearch/FlipkartAutoComplete.jsx";
+import FlipkartStarRating from "./Flipkart-Interview-Prep/StarRating/FlipkartStarRating.jsx";
 
 function App() {
   // const data = [
@@ -367,7 +368,8 @@ function App() {
       {/* <FlipkartThemeToggle/> */}
       {/* <FlipkartTabForm/> */}
       {/* <FlipkartQuizApp /> */}
-      <FlipkartAutoComplete/>
+      {/* <FlipkartAutoComplete/> */}
+      <FlipkartStarRating/>
     </>
   );
 }
