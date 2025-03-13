@@ -115,6 +115,7 @@ import FlipkartAutoComplete from "./Flipkart-Interview-Prep/AutoCompleteSearch/F
 import FlipkartStarRating from "./Flipkart-Interview-Prep/StarRating/FlipkartStarRating.jsx";
 import FlipkartInfinteScroll from "./Flipkart-Interview-Prep/InfinteScrollTable/FlipkartInfiniteScroll.jsx";
 import FlipkartOTP from "./Flipkart-Interview-Prep/OTPlogin/FlipkartOTP.jsx";
+import FlipkartTimer from "./Flipkart-Interview-Prep/Timer/FlipkartTimer.jsx";
 
 function App() {
   // const data = [
@@ -373,7 +374,8 @@ function App() {
       {/* <FlipkartAutoComplete/> */}
       {/* <FlipkartStarRating/> */}
       {/* <FlipkartInfinteScroll/> */}
-      <FlipkartOTP/>
+      {/* <FlipkartOTP/> */}
+      <FlipkartTimer/>
     </>
   );
 }
