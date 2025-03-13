@@ -116,6 +116,9 @@ import FlipkartStarRating from "./Flipkart-Interview-Prep/StarRating/FlipkartSta
 import FlipkartInfinteScroll from "./Flipkart-Interview-Prep/InfinteScrollTable/FlipkartInfiniteScroll.jsx";
 import FlipkartOTP from "./Flipkart-Interview-Prep/OTPlogin/FlipkartOTP.jsx";
 import FlipkartTimer from "./Flipkart-Interview-Prep/Timer/FlipkartTimer.jsx";
+import FilpkartFAQ from "./Flipkart-Interview-Prep/FAQ/FilpkartFAQ.jsx";
+import FlipkartModal from "./Flipkart-Interview-Prep/ModalOverlay/FlipkartModal.jsx";
+import FlipkartUndoableCounter from "./Flipkart-Interview-Prep/UndoableCounter/FlipkartUndoableCounter.jsx";
 
 function App() {
   // const data = [
@@ -375,7 +378,10 @@ function App() {
       {/* <FlipkartStarRating/> */}
       {/* <FlipkartInfinteScroll/> */}
       {/* <FlipkartOTP/> */}
-      <FlipkartTimer/>
+      {/* <FlipkartTimer/> */}
+      {/* <FilpkartFAQ/> */}
+      {/* <FlipkartModal/> */}
+      <FlipkartUndoableCounter/>
     </>
   );
 }
