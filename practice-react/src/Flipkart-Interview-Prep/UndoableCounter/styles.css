@@ -1,0 +1,15 @@
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.history{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    /* width: 300px; */
+    border: 1px solid black;
+}
