@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 
 function FlipkartTicTacToe() {
-  const [totalGrids, setTotalGrids] = useState([...Array(9).fill("")]);
-  const [player, setPlayer] = useState(true);
-  const [playerO, setPlayerO] = useState([]);
-  const [playerX, setPlayerX] = useState([]);
+  const [grids, setGrids] = useState([...Array(9).fill("")]);
+  const [player, setPlayer] = useState("X");
 
-  let winningGrids = [
+  const winningGrids = [
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
@@ -17,47 +16,94 @@ function FlipkartTicTacToe() {
     [2, 4, 6],
   ];
 
-  function handleClick(i) {
-    if (player) {
-      setPlayerO((prev) => [...prev, i]);
-      setPlayer(!player);
-    } else {
-      setPlayerX((prev) => [...prev, i]);
-      setPlayer(!player);
+  function checkWinner(newGrids) {
+    for (let pattern of winningGrids) {
+      const [ a, b, c ] = pattern;
+      if (
+        newGrids[a] &&
+        newGrids[a] === newGrids[b] &&
+        newGrids[a] === newGrids[c]
+      ) {
+        return newGrids[a];
+      }
     }
-    if (winningGrids.includes(playerO)) {
-      alert("Player O wins");
-      setPlayer(true);
-      setPlayerO([]);
-      setPlayerX(0);
-    }
-    if (playerX.includes(winningGrids)) {
-      alert("Player X wins");
-      setPlayer(true);
-      setPlayerO([]);
-      setPlayerX(0);
-    }
+    return null;
   }
 
+  function handleGrids(i) {
+    if (grids[i]) return;
+
+    let newGrids = [...grids];
+    newGrids[i] = player;
+    setGrids(newGrids);
+
+    const winner = checkWinner(newGrids);
+    if (winner) {
+      setTimeout(() => {
+        alert(`Player ${winner} wins!`);
+        handleReset();
+      }, 100);
+      return;
+    }
+
+    if (!newGrids.includes("")) {
+      setTimeout(() => {
+        alert("It's a draw!");
+        handleReset();
+      }, 100);
+      return;
+    }
+
+    setPlayer(player === "X" ? "O" : "X");
+  }
+
+
   function handleReset() {
-    setPlayer(true);
-    setPlayerO([]);
-    setPlayerX(0);
+    setGrids([...Array(9).fill("")]);
+    setPlayer("X");
   }
 
   return (
     <>
-      {[...Array(9).fill("")].map((item, i) => (
-        <div
-          onClick={() => handleClick(i)}
-          style={{ border: "1px solid black", height: "30px", width: "50px" }}
-          key={i}
-        >
-          {
-            playerO.includes(i) ? (<h2>O</h2>) : (<h6>"Click"</h6>)
-          }
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
+      >
+        <div>
+          <h2>{player} Player Turn</h2>
         </div>
-      ))}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 50px)",
+            justifyContent: "center",
+          }}
+        >
+          {grids.map((grid, i) => (
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "50px",
+                width: "50px",
+                border: "1px solid black",
+              }}
+              onClick={() => handleGrids(i)}
+              key={i}
+            >
+              <span>{grid}</span>
+            </div>
+          ))}
+        </div>
+        <div>
+          <button onClick={handleReset}>Reset Game</button>
+        </div>
+      </div>
     </>
   );
 }

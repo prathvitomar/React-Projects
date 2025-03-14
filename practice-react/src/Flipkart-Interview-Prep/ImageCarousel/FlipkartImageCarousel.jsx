@@ -33,11 +33,11 @@ function FlipkartImageCarousel() {
             }}>
                 <button onClick={handlePrev}>Prev</button>
 
-                // this loop approach is better than rendering image through index because
-                // all images will be rendered at once, and when we click prev and Next
-                // all the images will be just display and hiding
-                // while in index rendering approach, we will be making api call every single time,
-                // when we click on prev or next.
+                 {/* this loop approach is better than rendering image through index because
+                 all images will be rendered at once, and when we click prev and Next
+                 all the images will be just display and hiding
+                 while in index rendering approach, we will be making api call every single time,
+                 when we click on prev or next. */}
 
                 {
                     images.map((image, i)=>(               
@@ -48,8 +48,9 @@ function FlipkartImageCarousel() {
                         }} src={image.data.url_overridden_by_dest} alt="" />
                     ))
                 }
+
+                {/* rendering through index */}
                 
-                // rendering through index
                 {/* <img style={{
                     height:'300px',
                     width : '400px'
