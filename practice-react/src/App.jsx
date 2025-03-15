@@ -120,7 +120,9 @@
 // import FlipkartModal from "./Flipkart-Interview-Prep/ModalOverlay/FlipkartModal.jsx";
 // import FlipkartUndoableCounter from "./Flipkart-Interview-Prep/UndoableCounter/FlipkartUndoableCounter.jsx";
 // import FlipkartImageCarousel from "./Flipkart-Interview-Prep/ImageCarousel/FlipkartImageCarousel.jsx";
-import FlipkartTicTacToe from "./Flipkart-Interview-Prep/TicTacToe/FlipkartTicTacToe.jsx";
+// import FlipkartTicTacToe from "./Flipkart-Interview-Prep/TicTacToe/FlipkartTicTacToe.jsx";
+
+import FlipkartSelectableGrid from "./Flipkart-Interview-Prep/SelectableGrid/FlipkartSelectableGrid";
 
 function App() {
   // const data = [
@@ -384,8 +386,9 @@ function App() {
       {/* <FilpkartFAQ/> */}
       {/* <FlipkartModal/> */}
       {/* <FlipkartUndoableCounter/> */}
-      <FlipkartTicTacToe/>
+      {/* <FlipkartTicTacToe/> */}
       {/* <FlipkartImageCarousel/> */}
+      <FlipkartSelectableGrid/>
     </>
   );
 }
