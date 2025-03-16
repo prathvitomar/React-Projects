@@ -173,3 +173,71 @@
 //   console.log(count);
 // }
 // countOccurence("PrathvipP", "p")
+
+// function printName(){
+//     console.log(this.firstname, this.lastname);
+// }
+
+// function printName1(address, city){
+//     console.log(this.firstname, this.lastname, city, address);
+// }
+
+// let name = {
+//     firstname : "Prathvi",
+//     lastname : "Tomar",
+// }
+
+// let name1 = {
+//     firstname : "Neha",
+//     lastname : "Parmar",
+// }
+
+// let name2 = {
+//     firstname : "Pragya",
+//     lastname : "Sharma",
+// }
+
+// Bind Polyfill :
+// let obj1 = {
+//   firstName: "prathvi",
+//   lastName: "tomar",
+// };
+
+// function printInfo(hometown, city) {
+//   console.log(this.firstName, this.lastName, hometown, city);
+// }
+
+// Function.prototype.myBind = function (...args) {
+//   let func = this;
+//   return function customBind(...args2) {
+//     func.apply(args[0], [...args.slice(1), ...args2]);
+//   };
+// };
+// let info = printInfo.myBind(obj1);
+// info("Berasia", "Bhopal");
+
+
+                                    // Call and Bind Polyfill :
+// let name1 = {
+//     firstName: "prathvi",
+//     lastName: "tomar",
+// }
+
+// function printInfo(hometown, city){
+//     console.log(this.firstName, this.lastName, hometown, city);
+// }
+
+// Function.prototype.myCall = function(...args){
+//     let func = this;
+//     let leftArgs = args.slice(1)
+//     func.call(args[0], ...leftArgs);
+// }
+
+// Function.prototype.myApply = function(...args){
+//     this.call(args[0], ...args[1]);
+// }
+
+// // printInfo.call(name1);
+// // printInfo.apply(name1, ["Berasia", "Bhopal"]);
+// // printInfo.myCall(name1, "Berasia", "Bhopal");
+// printInfo.myApply(name1, ["Berasia", "Bhopal"]);

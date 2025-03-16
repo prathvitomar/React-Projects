@@ -122,6 +122,7 @@
 // import FlipkartImageCarousel from "./Flipkart-Interview-Prep/ImageCarousel/FlipkartImageCarousel.jsx";
 // import FlipkartTicTacToe from "./Flipkart-Interview-Prep/TicTacToe/FlipkartTicTacToe.jsx";
 
+import FlipkartMemoryGame from "./Flipkart-Interview-Prep/MemoryGame/FlipkartMemoryGame";
 import FlipkartSelectableGrid from "./Flipkart-Interview-Prep/SelectableGrid/FlipkartSelectableGrid";
 
 function App() {
@@ -388,7 +389,8 @@ function App() {
       {/* <FlipkartUndoableCounter/> */}
       {/* <FlipkartTicTacToe/> */}
       {/* <FlipkartImageCarousel/> */}
-      <FlipkartSelectableGrid/>
+      {/* <FlipkartSelectableGrid/> */}
+      <FlipkartMemoryGame/>
     </>
   );
 }
