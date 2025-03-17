@@ -241,3 +241,4 @@
 // // printInfo.apply(name1, ["Berasia", "Bhopal"]);
 // // printInfo.myCall(name1, "Berasia", "Bhopal");
 // printInfo.myApply(name1, ["Berasia", "Bhopal"]);
+
