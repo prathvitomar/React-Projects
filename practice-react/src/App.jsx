@@ -124,6 +124,8 @@
 
 import FlipkartMemoryGame from "./Flipkart-Interview-Prep/MemoryGame/FlipkartMemoryGame";
 import FlipkartSelectableGrid from "./Flipkart-Interview-Prep/SelectableGrid/FlipkartSelectableGrid";
+import ReactWindow from "./interview-questions/ReactWindow/ReactWindow";
+import MainTrafficLights from "./interview-questions/TrafficLights/MainTrafficLights";
 
 function App() {
   // const data = [
@@ -390,7 +392,9 @@ function App() {
       {/* <FlipkartTicTacToe/> */}
       {/* <FlipkartImageCarousel/> */}
       {/* <FlipkartSelectableGrid/> */}
-      <FlipkartMemoryGame/>
+      {/* <FlipkartMemoryGame/> */}
+      {/* <MainTrafficLights/> */}
+      {/* <ReactWindow/> */}
     </>
   );
 }

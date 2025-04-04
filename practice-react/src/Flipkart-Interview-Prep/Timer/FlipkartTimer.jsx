@@ -54,6 +54,7 @@ function FlipkartTimer() {
     } else {
       setHours((prev) => prev - 1);
       setMinutes(59);
+      
       setSeconds(59);
     }
   }
