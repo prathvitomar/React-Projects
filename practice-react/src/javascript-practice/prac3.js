@@ -216,8 +216,7 @@
 // let info = printInfo.myBind(obj1);
 // info("Berasia", "Bhopal");
 
-
-                                    // Call and Bind Polyfill :
+// Call and Bind Polyfill :
 // let name1 = {
 //     firstName: "prathvi",
 //     lastName: "tomar",
@@ -241,4 +240,76 @@
 // // printInfo.apply(name1, ["Berasia", "Bhopal"]);
 // // printInfo.myCall(name1, "Berasia", "Bhopal");
 // printInfo.myApply(name1, ["Berasia", "Bhopal"]);
+
+// function reverse(str){
+//     console.log(str.split('').reverse().join(''));
+// }
+// reverse("prat")
+
+// function removeDuplicate(arr) {
+//   // console.log([...new Set(arr)]);
+//     let obj = {}, ans =[];
+//     for(let i of arr){
+//         if(obj[arr[i]]) obj[i] +=1;
+//         else obj[arr[i]] = 1;
+//     }
+//     for(let item in obj){
+//         if(obj[item] === 1){
+//             ans.push(Number(item));
+//         }
+//     }
+//     console.log(ans);
+// }
+// removeDuplicate([2, 3, 4, 4, 2, 5, 6, 7, 1]);
+
+// function getCurrentData(){
+//     console.log(new Date().toISOString().split('T')[0]);
+// }
+// getCurrentData()
+
+// Input array => 10, 15, 20, 25, 30. Output array => 10, 25, 45, 70, 100.
+// function cummalativeSum(arr){
+//     let ans = [arr[0]], i = 0, j = 1;
+//     while(j<arr.length){
+//         ans.push(ans[i]+arr[j]);
+//         i++;
+//         j++;
+//     }
+//     console.log(ans);
+// }
+// cummalativeSum([10, 15, 20, 25, 30])
+
+// function splitArray(arr, length) {
+//   let ans = [];
+//   for(let i = 0; i < arr.length; i +=length){
+//     console.log(i)
+//     ans.push(arr.slice(i, i+length));
+//   }
+//   console.log(ans)
+// }
+// splitArray([10, 15, 20, 25, 30, 69,20,78],2);
+
+// “secret_key_one” into camel case results in “secretKeyOne.”
+// function camelCase(str){
+//     let firstArr = str.split("_").map((letter)=> letter[0].toUpperCase() + letter.slice(1)).join('');
+//     console.log(firstArr);
+// }
+// camelCase("secret_key_one");
+
+// function convertToNumber(str){
+//     let alpahabets = "0123456789";
+//     for(let l of str){
+//         if(!alpahabets.includes(l)) return 0;
+//     }
+//     return Number(str);
+// }
+// console.log(convertToNumber("0"));
+
+// function factorial(n){
+//     if(n === 1){
+//         return n;
+//     }
+//     return n * factorial(n-1);
+// }
+// console.log(factorial(5));
 
