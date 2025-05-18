@@ -122,10 +122,12 @@
 // import FlipkartImageCarousel from "./Flipkart-Interview-Prep/ImageCarousel/FlipkartImageCarousel.jsx";
 // import FlipkartTicTacToe from "./Flipkart-Interview-Prep/TicTacToe/FlipkartTicTacToe.jsx";
 
+import { RecoilRoot } from "recoil";
 import FlipkartMemoryGame from "./Flipkart-Interview-Prep/MemoryGame/FlipkartMemoryGame";
 import FlipkartSelectableGrid from "./Flipkart-Interview-Prep/SelectableGrid/FlipkartSelectableGrid";
 import ReactWindow from "./interview-questions/ReactWindow/ReactWindow";
 import MainTrafficLights from "./interview-questions/TrafficLights/MainTrafficLights";
+import Recoil from "./recoil-tutorial/Recoil";
 
 function App() {
   // const data = [
@@ -395,6 +397,9 @@ function App() {
       {/* <FlipkartMemoryGame/> */}
       {/* <MainTrafficLights/> */}
       {/* <ReactWindow/> */}
+      <RecoilRoot>
+        <Recoil/>
+      </RecoilRoot>
     </>
   );
 }
