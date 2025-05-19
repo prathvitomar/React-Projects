@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useRecoilState } from 'recoil';
-import { todo } from './atoms/todo';
+import { todo } from '../atoms/todo';
 import Todo from './Todo';
 
 function Todos() {
