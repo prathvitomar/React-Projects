@@ -128,6 +128,7 @@ import FlipkartSelectableGrid from "./Flipkart-Interview-Prep/SelectableGrid/Fli
 import ReactWindow from "./interview-questions/ReactWindow/ReactWindow";
 import MainTrafficLights from "./interview-questions/TrafficLights/MainTrafficLights";
 import Recoil from "./recoil-tutorial/Recoil";
+import Web1 from "./css-tutorial/reponsive-web-designs/Web1";
 
 function App() {
   // const data = [
@@ -397,9 +398,10 @@ function App() {
       {/* <FlipkartMemoryGame/> */}
       {/* <MainTrafficLights/> */}
       {/* <ReactWindow/> */}
-      <RecoilRoot>
+      {/* <RecoilRoot>
         <Recoil/>
-      </RecoilRoot>
+      </RecoilRoot> */}
+      <Web1/>
     </>
   );
 }
