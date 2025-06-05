@@ -16,3 +16,20 @@
     width: 30px;
     border: 1px solid black;
 }
+
+.main-div{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+}

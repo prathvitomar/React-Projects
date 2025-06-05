@@ -44,7 +44,7 @@
 // import AccordianMultipleSelection from "./react-coding-practice/AccordianMultipleSelection.jsx";
 // import Interview from "./react-coding-practice/Interview.jsx";
 // import Css1 from "./css-tutorial/css-1/css1.jsx";
-// import Flexbox from "./css-tutorial/flexbox/flexbox.jsx";
+import Flexbox from "./css-tutorial/flexbox/Flexbox.jsx";
 // import Grid from "./css-tutorial/grid/Grid.jsx";
 // import DebouncingApi from "./advance-topics/DebouncingApi.jsx";
 // import Todos from "./react-coding-practice/Todos.jsx";
@@ -311,7 +311,7 @@ function App() {
       {/* <WeatherApp/> */}
       {/* <AccordianMultipleSelection/> */}
       {/* <Css1/> */}
-      {/* <Flexbox/> */}
+      <Flexbox/>
       {/* <Grid/> */}
       {/* <DebouncingApi/> */}
       {/* <Debouncing/> */}
@@ -401,7 +401,7 @@ function App() {
       {/* <RecoilRoot>
         <Recoil/>
       </RecoilRoot> */}
-      <Web1/>
+      {/* <Web1/> */}
     </>
   );
 }
