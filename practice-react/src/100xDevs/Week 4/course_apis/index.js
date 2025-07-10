@@ -1,34 +1,26 @@
+import dotenv from "dotenv";
+dotenv.config();
 import express from "express";
+import bodyParser from "body-parser";
 import { connectToDatabase } from "./config/dbConnection.js";
-import { verifyJwtToken } from "./config/jwt.js";
+import adminRouter from "./routes/admin.route.js";
+import userRouter from "./routes/user.route.js";
 
 const app = express();
+app.use(bodyParser.json());
 
-function authenticateJwt(req, res, next) {
-  try {
-    const authHeader = req.headers.authorization;
-    if (!authHeader) {
-      return res
-        .status(403)
-        .json({ message: "Authorization Header Not Available" });
-    }
-    const token = authHeader.split(" ")[1];
-    if (!token) return res.status(403).json({ message: "Token Not Available" });
-    console.log(token);
-    const userData = verifyJwtToken(token);
-    req.user = userData;
-    return next();
-  } catch (e) {
-    return res.status(403).json({
-      message: "Not Authorized",
-    });
-  }
-}
-
-app.get("/", authenticateJwt, (req, res) => {
+app.get("/", (req, res) => {
   return res.send("Welcome to Course Selling App");
 });
 
-app.listen(process.env.PORT || 3000, () => {
+// Admin Routes
+app.use("/admin", adminRouter);
+
+// User Routes
+app.use("/users", userRouter);
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, "0.0.0.0", () => {
   connectToDatabase();
+  console.log(`Server running on http://localhost:${PORT}`);
 });
